@@ -93,7 +93,7 @@ $coinsize: 10rem;
 }
 
 @mixin edgeout($face: var(--head)) {
-    width: 0.1rem;
+    width: ($coinsize / 100);
       box-shadow:
         ($coinsize / -200) 0 0 var(--side),
         ($coinsize / -100) 0 0 var(--side),
