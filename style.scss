@@ -1,0 +1,191 @@
+:root {
+    --face: #be9d66;
+    --lowlight: #111;
+    --side: #896c3b;
+    --side-dark: #120e08;
+    --coin-size: 7rem;
+    --head: url('crown.png');
+    --tail: url('knife.png');
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    background-color: silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /*
+    everything above is positioning and variables.
+    this is where the real fun begins...
+  */
+  
+  .coin {
+    height: var(--coin-size);
+    width: var(--coin-size);
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .coin::before {
+    content: '';
+    display: block;
+    position: relative;
+    height: var(--coin-size);
+    width: var(--coin-size);
+    border-radius: 50%;
+    background-color: var(--face);
+    animation: spin 15s alternate infinite;
+    background-image: var(--coin-face);
+    background-size: 100% 100%;
+    background-position: center;
+    background-blend-mode: overlay;
+    filter: saturate(0);
+    animation-delay: -0.5s;
+  }
+
+/* mixins */
+
+@mixin face($face: var(--head)) {
+    width: var(--coin-size);
+      box-shadow:
+        0 0 0 var(--side-dark);
+      animation-timing-function: ease-in;
+      background-image: $face;
+      background-color: var(--face);
+}
+
+@mixin edgein($face: var(--head)) {
+    width: 0.1rem;
+      box-shadow:
+        0.05rem 0 0 var(--side),
+        0.1rem 0 0 var(--side),
+        0.15rem 0 0 var(--side),
+        0.2rem 0 0 var(--side),
+        0.25rem 0 0 var(--side),
+        0.3rem 0 0 var(--side),
+        0.35rem 0 0 var(--side),
+        0.4rem 0 0 var(--side),
+        0.45rem 0 0 var(--side),
+        0.5rem 0 0 var(--side),
+        0.55rem 0 0 var(--side),
+        0.6rem 0 0 var(--side),
+        0.65rem 0 0 var(--side),
+        0.7rem 0 0 var(--side),
+        0.75rem 0 0 var(--side);
+      transform: translateX(-0.375rem);
+      background-color: var(--lowlight);
+      animation-timing-function: linear;
+      background-image: $face;
+}
+
+@mixin edgeout($face: var(--head)) {
+    width: 0.1rem;
+      box-shadow:
+        -0.05rem 0 0 var(--side),
+        -0.1rem 0 0 var(--side),
+        -0.15rem 0 0 var(--side),
+        -0.2rem 0 0 var(--side),
+        -0.25rem 0 0 var(--side),
+        -0.3rem 0 0 var(--side),
+        -0.35rem 0 0 var(--side),
+        -0.4rem 0 0 var(--side),
+        -0.45rem 0 0 var(--side),
+        -0.5rem 0 0 var(--side),
+        -0.55rem 0 0 var(--side),
+        -0.6rem 0 0 var(--side),
+        -0.65rem 0 0 var(--side),
+        -0.7rem 0 0 var(--side),
+        -0.75rem 0 0 var(--side);
+      transform: translateX(0.375rem);
+      background-color: var(--lowlight);
+      animation-timing-function: ease-out;
+      background-image: $face;
+}
+
+/* animation */
+
+/* 0.0
+
+Press Enter to exit terminal */
+
+
+@keyframes spin{
+
+    0% { @include face($face: var(--tail)); }
+3.374% { @include edgein($face: var(--tail)); }
+3.376% { @include edgeout; }
+6.75% { @include face; }
+10.229000000000001% { @include edgein; }
+10.231% { @include edgeout($face: var(--tail)); }
+13.71% { @include face($face: var(--tail)); }
+17.254% { @include edgein($face: var(--tail)); }
+17.256000000000004% { @include edgeout; }
+20.8% { @include face; }
+24.379% { @include edgein; }
+24.381000000000004% { @include edgeout($face: var(--tail)); }
+27.96% { @include face($face: var(--tail)); }
+31.544% { @include edgein($face: var(--tail)); }
+31.546000000000003% { @include edgeout; }
+35.13% { @include face; }
+38.689% { @include edgein; }
+38.690999999999995% { @include edgeout($face: var(--tail)); }
+42.25% { @include face($face: var(--tail)); }
+45.74400000000001% { @include edgein($face: var(--tail)); }
+45.746% { @include edgeout; }
+49.24% { @include face; }
+52.639% { @include edgein; }
+52.641% { @include edgeout($face: var(--tail)); }
+56.04% { @include face($face: var(--tail)); }
+59.314% { @include edgein($face: var(--tail)); }
+59.315999999999995% { @include edgeout; }
+62.59% { @include face; }
+65.704% { @include edgein; }
+65.706% { @include edgeout($face: var(--tail)); }
+68.82% { @include face($face: var(--tail)); }
+71.749% { @include edgein($face: var(--tail)); }
+71.751% { @include edgeout; }
+74.68% { @include face; }
+77.37899999999999% { @include edgein; }
+77.381% { @include edgeout($face: var(--tail)); }
+80.08% { @include face($face: var(--tail)); }
+81.03899999999999% { @include edgein($face: var(--tail)); }
+81.041% { @include edgeout; }
+82% { @include face; }
+82.999% { @include edgein; }
+83.001% { @include edgeout($face: var(--tail)); }
+84% { @include face($face: var(--tail)); }
+84.999% { @include edgein($face: var(--tail)); }
+85.001% { @include edgeout; }
+86% { @include face; }
+86.999% { @include edgein; }
+87.001% { @include edgeout($face: var(--tail)); }
+88% { @include face($face: var(--tail)); }
+88.999% { @include edgein($face: var(--tail)); }
+89.001% { @include edgeout; }
+90% { @include face; }
+90.999% { @include edgein; }
+91.001% { @include edgeout($face: var(--tail)); }
+92% { @include face($face: var(--tail)); }
+92.999% { @include edgein($face: var(--tail)); }
+93.001% { @include edgeout; }
+94% { @include face; }
+94.999% { @include edgein; }
+95.001% { @include edgeout($face: var(--tail)); }
+96% { @include face($face: var(--tail)); }
+96.999% { @include edgein($face: var(--tail)); }
+97.001% { @include edgeout; }
+98% { @include face; }
+98.999% { @include edgein; }
+99.001% { @include edgeout($face: var(--tail)); }
+100% { @include face($face: var(--tail)); }
+
+}
