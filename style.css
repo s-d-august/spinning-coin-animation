@@ -55,9 +55,7 @@ body {
 
 /* mixins */
 /* animation */
-/* 0.0
 
-Press Enter to exit terminal */
 @keyframes spin {
   0% {
     width: var(--coin-size);
