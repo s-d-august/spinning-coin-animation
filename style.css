@@ -1,6 +1,7 @@
 /* Basic spin animation from the Super Simple CSS Spinning Coin CodePen by Aedan Xaelan. https://codepen.io/xaelan/pen/wvwPpLa  */
 
 /* SASS Variables */
+
 :root {
   --face: #a0a0a0;
   --lowlight: #111;
