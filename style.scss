@@ -29,9 +29,9 @@ $coinsize: 10rem;
   
   
   .coin {
-    margin: 0.5rem;
     height: $coinsize;
     width: $coinsize;
+    margin: ($coinsize / 20);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,24 +67,24 @@ $coinsize: 10rem;
 }
 
 @mixin edgein($face: var(--head)) {
-    width: 0.1rem;
+    width: ($coinsize / 100);
       box-shadow:
-        0.05rem 0 0 var(--side),
-        0.1rem 0 0 var(--side),
-        0.15rem 0 0 var(--side),
-        0.2rem 0 0 var(--side),
-        0.25rem 0 0 var(--side),
-        0.3rem 0 0 var(--side),
-        0.35rem 0 0 var(--side),
-        0.4rem 0 0 var(--side),
-        0.45rem 0 0 var(--side),
-        0.5rem 0 0 var(--side),
-        0.55rem 0 0 var(--side),
-        0.6rem 0 0 var(--side),
-        0.65rem 0 0 var(--side),
-        0.7rem 0 0 var(--side),
-        0.75rem 0 0 var(--side);
-      transform: translateX(-0.375rem);
+        ($coinsize / 200) 0 0 var(--side),
+        ($coinsize / 100) 0 0 var(--side),
+        ($coinsize / 66.66) 0 0 var(--side),
+        ($coinsize / 50) 0 0 var(--side),
+        ($coinsize / 40) 0 0 var(--side),
+        ($coinsize / 33.33) 0 0 var(--side),
+        ($coinsize / 28.57) 0 0 var(--side),
+        ($coinsize / 25) 0 0 var(--side),
+        ($coinsize / 22.22) 0 0 var(--side),
+        ($coinsize / 20) 0 0 var(--side),
+        ($coinsize / 18.18) 0 0 var(--side),
+        ($coinsize / 16.65) 0 0 var(--side),
+        ($coinsize / 15.37) 0 0 var(--side),
+        ($coinsize / 14.28) 0 0 var(--side),
+        ($coinsize / 13.33) 0 0 var(--side);
+      transform: translateX(($coinsize / -26.66));
       background-color: var(--lowlight);
       animation-timing-function: linear;
       background-image: $face;
@@ -93,22 +93,22 @@ $coinsize: 10rem;
 @mixin edgeout($face: var(--head)) {
     width: 0.1rem;
       box-shadow:
-        -0.05rem 0 0 var(--side),
-        -0.1rem 0 0 var(--side),
-        -0.15rem 0 0 var(--side),
-        -0.2rem 0 0 var(--side),
-        -0.25rem 0 0 var(--side),
-        -0.3rem 0 0 var(--side),
-        -0.35rem 0 0 var(--side),
-        -0.4rem 0 0 var(--side),
-        -0.45rem 0 0 var(--side),
-        -0.5rem 0 0 var(--side),
-        -0.55rem 0 0 var(--side),
-        -0.6rem 0 0 var(--side),
-        -0.65rem 0 0 var(--side),
-        -0.7rem 0 0 var(--side),
-        -0.75rem 0 0 var(--side);
-      transform: translateX(0.375rem);
+        ($coinsize / -200) 0 0 var(--side),
+        ($coinsize / -100) 0 0 var(--side),
+        ($coinsize / -66.66) 0 0 var(--side),
+        ($coinsize / -50) 0 0 var(--side),
+        ($coinsize / -40) 0 0 var(--side),
+        ($coinsize / -33.33) 0 0 var(--side),
+        ($coinsize / -28.57) 0 0 var(--side),
+        ($coinsize / -25) 0 0 var(--side),
+        ($coinsize / -22.22) 0 0 var(--side),
+        ($coinsize / -20) 0 0 var(--side),
+        ($coinsize / -18.18) 0 0 var(--side),
+        ($coinsize / -16.65) 0 0 var(--side),
+        ($coinsize / -15.37) 0 0 var(--side),
+        ($coinsize / -14.28) 0 0 var(--side),
+        ($coinsize / -13.33) 0 0 var(--side);
+      transform: translateX(($coinsize / 26.66));
       background-color: var(--lowlight);
       animation-timing-function: ease-out;
       background-image: $face;
