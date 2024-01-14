@@ -1,9 +1,11 @@
+/* SASS Variables */
+$coinsize: 10rem;
+
 :root {
     --face: #a0a0a0;
     --lowlight: #111;
     --side: #6F6F6F;
     --side-dark: #0e0e0e;
-    --coin-size: 7rem;
     --head: url('crown.png');
     --tail: url('knife.png');
   }
@@ -25,10 +27,11 @@
     this is where the real fun begins...
   */
   
+  
   .coin {
-    height: var(--coin-size);
-    width: var(--coin-size);
     margin: 0.5rem;
+    height: $coinsize;
+    width: $coinsize;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,8 +42,8 @@
     content: '';
     display: block;
     position: relative;
-    height: var(--coin-size);
-    width: var(--coin-size);
+    height: $coinsize;
+    width: $coinsize;
     border-radius: 50%;
     background-color: var(--face);
     animation: spin 15s alternate infinite;
@@ -55,7 +58,7 @@
 /* mixins */
 
 @mixin face($face: var(--head)) {
-    width: var(--coin-size);
+    width: $coinsize;
       box-shadow:
         0 0 0 var(--side-dark);
       animation-timing-function: ease-in;
