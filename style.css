@@ -1,7 +1,5 @@
 /* Basic spin animation from the Super Simple CSS Spinning Coin CodePen by Aedan Xaelan. https://codepen.io/xaelan/pen/wvwPpLa  */
 
-/* SASS Variables */
-
 :root {
   --face: #a0a0a0;
   --lowlight: #111;
@@ -9,6 +7,7 @@
   --side-dark: #0e0e0e;
   --head: url("crown.png");
   --tail: url("knife.png");
+  --coinsize: 10rem;
 }
 
 html {
@@ -28,9 +27,8 @@ body {
   this is where the real fun begins...
 */
 .coin {
-  height: 10rem;
-  width: 10rem;
-  margin: 0.5rem;
+  height: var(--coinsize);
+  width: var(--coinsize);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,8 +39,8 @@ body {
   content: "";
   display: block;
   position: relative;
-  height: 10rem;
-  width: 10rem;
+  height: var(--coinsize);
+  width: var(--coinsize);
   border-radius: 50%;
   background-color: var(--face);
   animation: spin 15s alternate infinite;
