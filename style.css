@@ -22,10 +22,6 @@ body {
   align-items: center;
 }
 
-/*
-  everything above is positioning and variables.
-  this is where the real fun begins...
-*/
 .coin {
   height: var(--coinsize);
   width: var(--coinsize);

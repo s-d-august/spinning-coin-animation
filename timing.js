@@ -1,14 +1,67 @@
 /* This code generates CSS keyframes for a given size of coin and given intervals of rotation. */
 
 
-let coinsize = [10];
-/* Set unit (i.e. px, em, in)*/
-let unit = ['rem'];
+let coinsize = [10]; // number only
 
+let unit = ['rem']; // i.e. px, in, rem
+  
 let interval = [0, 12.5, 21.5, 30, 38, 45.5, 52.5, 59, 65, 70.5, 75.5, 80, 84, 87.5, 90.5, 93, 95, 96, 97, 97.5, 98, 98.5, 99, 99.5, 100];
+  
+document.write(`
 
-for (let i = 0; i < interval.length; i = i + 2) {
+<style>
+:root {
+  --face: #a0a0a0;
+  --lowlight: #111;
+  --side: #6F6F6F;
+  --side-dark: #0e0e0e;
+  --head: url("crown.png");
+  --tail: url("knife.png");
+  --coinsize: 10rem;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #f0efff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin {
+  height: ${coinsize}${unit};
+  width: ${coinsize}${unit};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin::before {
+  content: "";
+  display: block;
+  position: relative;
+  height: ${coinsize}${unit};
+  width: ${coinsize}${unit};
+  border-radius: 50%;
+  background-color: var(--face);
+  animation: spin 15s alternate infinite;
+  background-image: var(--coin-face);
+  background-size: 100% 100%;
+  background-position: center;
+  background-blend-mode: overlay;
+  filter: saturate(0);
+  animation-delay: -0.5s;
+}  @keyframes spin {`
+)
+
+  for (let i = 0; i < (interval.length - 1); i = i + 2) {
     document.write(`
+
     
     ${interval[i]}% {
     width: ${coinsize}${unit};
@@ -100,7 +153,7 @@ for (let i = 0; i < interval.length; i = i + 2) {
       background-image: var(--head);
 }<br><br>
 
-  ${(interval[i + 1] + interval[i + 2]) / 2 + 0.001}% {
+                   ${(interval[i + 1] + interval[i + 2]) / 2 + 0.001}% {
     width: ${coinsize / 100}${unit};
       box-shadow:
         ${coinsize / -200}${unit} 0 0 var(--side),
@@ -125,4 +178,16 @@ for (let i = 0; i < interval.length; i = i + 2) {
 }<br><br>`
 
     )
-}
+  }
+
+document.write(`
+    
+    100% {
+    width: ${coinsize}${unit};
+      box-shadow:
+        0 0 0 var(--side-dark);
+      animation-timing-function: ease-in;
+      background-image: var(--tail);
+      background-color: var(--face);
+}}
+</style>`)
