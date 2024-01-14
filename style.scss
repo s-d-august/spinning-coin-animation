@@ -120,72 +120,78 @@ Press Enter to exit terminal */
 
 @keyframes spin{
 
-    0% { @include face($face: var(--tail)); }
-3.374% { @include edgein($face: var(--tail)); }
-3.376% { @include edgeout; }
-6.75% { @include face; }
-10.229000000000001% { @include edgein; }
-10.231% { @include edgeout($face: var(--tail)); }
-13.71% { @include face($face: var(--tail)); }
-17.254% { @include edgein($face: var(--tail)); }
-17.256000000000004% { @include edgeout; }
-20.8% { @include face; }
-24.379% { @include edgein; }
-24.381000000000004% { @include edgeout($face: var(--tail)); }
-27.96% { @include face($face: var(--tail)); }
-31.544% { @include edgein($face: var(--tail)); }
-31.546000000000003% { @include edgeout; }
-35.13% { @include face; }
-38.689% { @include edgein; }
-38.690999999999995% { @include edgeout($face: var(--tail)); }
-42.25% { @include face($face: var(--tail)); }
-45.74400000000001% { @include edgein($face: var(--tail)); }
-45.746% { @include edgeout; }
-49.24% { @include face; }
-52.639% { @include edgein; }
-52.641% { @include edgeout($face: var(--tail)); }
-56.04% { @include face($face: var(--tail)); }
-59.314% { @include edgein($face: var(--tail)); }
-59.315999999999995% { @include edgeout; }
-62.59% { @include face; }
-65.704% { @include edgein; }
-65.706% { @include edgeout($face: var(--tail)); }
-68.82% { @include face($face: var(--tail)); }
-71.749% { @include edgein($face: var(--tail)); }
-71.751% { @include edgeout; }
-74.68% { @include face; }
-77.37899999999999% { @include edgein; }
-77.381% { @include edgeout($face: var(--tail)); }
-80.08% { @include face($face: var(--tail)); }
-81.03899999999999% { @include edgein($face: var(--tail)); }
-81.041% { @include edgeout; }
-82% { @include face; }
-82.999% { @include edgein; }
-83.001% { @include edgeout($face: var(--tail)); }
-84% { @include face($face: var(--tail)); }
-84.999% { @include edgein($face: var(--tail)); }
-85.001% { @include edgeout; }
-86% { @include face; }
-86.999% { @include edgein; }
-87.001% { @include edgeout($face: var(--tail)); }
-88% { @include face($face: var(--tail)); }
-88.999% { @include edgein($face: var(--tail)); }
-89.001% { @include edgeout; }
-90% { @include face; }
-90.999% { @include edgein; }
-91.001% { @include edgeout($face: var(--tail)); }
-92% { @include face($face: var(--tail)); }
-92.999% { @include edgein($face: var(--tail)); }
-93.001% { @include edgeout; }
-94% { @include face; }
-94.999% { @include edgein; }
-95.001% { @include edgeout($face: var(--tail)); }
-96% { @include face($face: var(--tail)); }
-96.999% { @include edgein($face: var(--tail)); }
-97.001% { @include edgeout; }
-98% { @include face; }
-98.999% { @include edgein; }
-99.001% { @include edgeout($face: var(--tail)); }
-100% { @include face($face: var(--tail)); }
-
+  0% { @include face($face: var(--tail)); }
+  6.249% { @include edgein($face: var(--tail)); }
+  6.251% { @include edgeout; }
+  12.5% { @include face; }
+  16.999% { @include edgein; }
+  17.001% { @include edgeout($face: var(--tail)); }
+  21.5% { @include face($face: var(--tail)); }
+  25.749% { @include edgein($face: var(--tail)); }
+  25.751% { @include edgeout; }
+  30% { @include face; }
+  33.999% { @include edgein; }
+  34.001% { @include edgeout($face: var(--tail)); }
+  38% { @include face($face: var(--tail)); }
+  41.749% { @include edgein($face: var(--tail)); }
+  41.751% { @include edgeout; }
+  45.5% { @include face; }
+  48.999% { @include edgein; }
+  49.001% { @include edgeout($face: var(--tail)); }
+  52.5% { @include face($face: var(--tail)); }
+  55.749% { @include edgein($face: var(--tail)); }
+  55.751% { @include edgeout; }
+  59% { @include face; }
+  61.999% { @include edgein; }
+  62.001% { @include edgeout($face: var(--tail)); }
+  65% { @include face($face: var(--tail)); }
+  67.749% { @include edgein($face: var(--tail)); }
+  67.751% { @include edgeout; }
+  70.5% { @include face; }
+  72.999% { @include edgein; }
+  73.001% { @include edgeout($face: var(--tail)); }
+  75.5% { @include face($face: var(--tail)); }
+  77.749% { @include edgein($face: var(--tail)); }
+  77.751% { @include edgeout; }
+  80% { @include face; }
+  81.999% { @include edgein; }
+  82.001% { @include edgeout($face: var(--tail)); }
+  84% { @include face($face: var(--tail)); }
+  85.749% { @include edgein($face: var(--tail)); }
+  85.751% { @include edgeout; }
+  87.5% { @include face; }
+  88.999% { @include edgein; }
+  89.001% { @include edgeout($face: var(--tail)); }
+  90.5% { @include face($face: var(--tail)); }
+  91.749% { @include edgein($face: var(--tail)); }
+  91.751% { @include edgeout; }
+  93% { @include face; }
+  93.999% { @include edgein; }
+  94.001% { @include edgeout($face: var(--tail)); }
+  95% { @include face($face: var(--tail)); }
+  95.499% { @include edgein($face: var(--tail)); }
+  95.501% { @include edgeout; }
+  96% { @include face; }
+  96.499% { @include edgein; }
+  96.501% { @include edgeout($face: var(--tail)); }
+  97% { @include face($face: var(--tail)); }
+  97.249% { @include edgein($face: var(--tail)); }
+  97.251% { @include edgeout; }
+  97.5% { @include face; }
+  97.749% { @include edgein; }
+  97.751% { @include edgeout($face: var(--tail)); }
+  98% { @include face($face: var(--tail)); }
+  98.249% { @include edgein($face: var(--tail)); }
+  98.251% { @include edgeout; }
+  98.5% { @include face; }
+  98.749% { @include edgein; }
+  98.751% { @include edgeout($face: var(--tail)); }
+  99% { @include face($face: var(--tail)); }
+  99.249% { @include edgein($face: var(--tail)); }
+  99.251% { @include edgeout; }
+  99.5% { @include face; }
+  99.749% { @include edgein; }
+  99.751% { @include edgeout($face: var(--tail)); }
+  100% { @include face($face: var(--tail)); }
+  
 }
