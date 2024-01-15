@@ -9,7 +9,7 @@ let interval = [0, 12.5, 21.5, 30, 38, 45.5, 52.5, 59, 65, 70.5, 75.5, 80, 84, 8
   
 document.write(`
 
-<p>
+<style>
 :root {
   --face: #a0a0a0;
   --lowlight: #111;
@@ -190,4 +190,4 @@ document.write(`
       background-image: var(--tail);
       background-color: var(--face);
 }}
-</p>`)
+</style>`)
