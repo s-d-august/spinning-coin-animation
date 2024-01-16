@@ -8,7 +8,7 @@ let interval = [0, 12.5, 21.5, 30, 38, 45.5, 52.5, 59, 65, 70.5, 75.5, 80, 84, 8
 // Timing intervals for each rotation, based on CSS animation keyframes
 
 // Everything up to the start of the keyframes, which are generated on a loop
-let input1 = [`
+let css1 = [`
 
 
 :root {
@@ -60,9 +60,9 @@ body {
 }  @keyframes spin {`
 ]
 
-//The function to generate the spinning animation (input2). The array variable is associated with the interval variable.
+//The function to generate the spinning animation (css2). The array variable is associated with the interval variable.
 
-function getInput2(array) {
+function getcss2(array) {
   var output = '';
 
   for (let i = 0; i < (array.length - 1); i = i + 2) {
@@ -187,10 +187,10 @@ function getInput2(array) {
   return output;
 }
 
-let input2 = getInput2(interval) //Uses the getInput2 function to generate the CSS keyframes.
+let css2 = getcss2(interval) //Uses the getcss2 function to generate the CSS keyframes.
 
 //The final CSS keyframe (it doesn't generate properly otherwise.)
-let input3 = [`
+let css3 = [`
     
     100% {
     width: ${coinsize}${unit};
@@ -207,7 +207,7 @@ let input3 = [`
 const stylesheet = new CSSStyleSheet();
 
 // Add some CSS
-stylesheet.replaceSync(input1 + input2 + input3)
+stylesheet.replaceSync(css1 + css2 + css3)
 
 // Tell the document to adopt your new stylesheet.
 document.adoptedStyleSheets = [stylesheet];
