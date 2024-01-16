@@ -8,6 +8,7 @@ let backgroundColor = ['#f0efff'] // string should be formatted for CSS -- hex, 
 
 let headImage = ['url("crown.png")'] // link to the image for the HEADS side of the coin, formatted for CSS. Can be local or external.
 let tailImage = ['url("knife.png")'] // same as above, for TAILS
+let animationTime = [15]; // in seconds. The complete accelerate/decelerate cycle takes twice this time (because it reverses.)
 
 let interval = [0, 12.5, 21.5, 30, 38, 45.5, 52.5, 59, 65, 70.5, 75.5, 80, 84, 87.5, 90.5, 93, 95, 96, 97, 97.5, 98, 98.5, 99, 99.5, 100];
 /* Timing intervals for each rotation, based on CSS animation keyframes. 
@@ -58,7 +59,7 @@ body {
   border-radius: 50%;
   background-color: var(--faceColor
 );
-  animation: spin 15s alternate infinite;
+  animation: spin ${animationTime}s alternate infinite;
   background-image: ${headImage};
   background-size: 100% 100%;
   background-position: center;
