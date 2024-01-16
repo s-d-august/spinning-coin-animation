@@ -22,7 +22,7 @@ let css1 = [`
 
 
 :root {
-  --face: #a0a0a0;
+  --faceColor: #a0a0a0;
   --lowlight: #111;
   --side: #6F6F6F;
   --side-dark: #0e0e0e;
@@ -56,7 +56,8 @@ body {
   height: ${coinsize}${unit};
   width: ${coinsize}${unit};
   border-radius: 50%;
-  background-color: var(--face);
+  background-color: var(--faceColor
+);
   animation: spin 15s alternate infinite;
   background-image: var(--coin-face);
   background-size: 100% 100%;
@@ -82,7 +83,8 @@ function getcss2(array) {
         0 0 0 var(--side-dark);
       animation-timing-function: ease-in;
       background-image: var(--tail);
-      background-color: var(--face);
+      background-color: var(--faceColor
+    );
 }
 
     ${(interval[i] + interval[i + 1]) / 2 - 0.001}% {
@@ -139,7 +141,8 @@ function getcss2(array) {
         0 0 0 var(--side-dark);
       animation-timing-function: ease-in;
       background-image: ${headImage};
-      background-color: var(--face);
+      background-color: var(--faceColor
+    );
 }
 
   ${(interval[i + 1] + interval[i + 2]) / 2 - 0.001}% {
@@ -205,7 +208,8 @@ let css3 = [`
         0 0 0 var(--side-dark);
       animation-timing-function: ease-in;
       background-image: var(--tail);
-      background-color: var(--face);
+      background-color: var(--faceColor
+    );
 }}`]
 
 /* ONLY ONE OF THE BELOW SHOULD BE OPERATIONAL -- EITHER OVERRIDE STYLESHEET OR WRITE TO <style>
