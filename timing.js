@@ -1,12 +1,12 @@
-/* This code generates CSS keyframes for a given size of coin and given intervals of rotation. */
+/* This code allows for the size and rotation of the coin to be changed dynamically by using CSSStylesheet. */
 
 let coinsize = [10]; // number only
 
 let unit = ['rem']; // i.e. px, in, rem
-  
+
 let interval = [0, 12.5, 21.5, 30, 38, 45.5, 52.5, 59, 65, 70.5, 75.5, 80, 84, 87.5, 90.5, 93, 95, 96, 97, 97.5, 98, 98.5, 99, 99.5, 100];
 // Timing intervals for each rotation, based on CSS animation keyframes
- 
+
 // Everything up to the start of the keyframes, which are generated on a loop
 let input1 = [`
 
@@ -60,7 +60,7 @@ body {
 }  @keyframes spin {`
 ]
 
-//The function to generate the spinning animation
+//The function to generate the spinning animation (input2). The array variable is associated with the interval variable.
 
 function getInput2(array) {
   var output = '';
@@ -159,7 +159,7 @@ function getInput2(array) {
       background-image: var(--head);
 }
 
-                   ${(interval[i + 1] + interval[i + 2]) / 2 + 0.001}% {
+  ${(interval[i + 1] + interval[i + 2]) / 2 + 0.001}% {
     width: ${coinsize / 100}${unit};
       box-shadow:
         ${coinsize / -200}${unit} 0 0 var(--side),
@@ -184,12 +184,12 @@ function getInput2(array) {
 }`)
 
   }
-return output;
+  return output;
 }
 
-let input2 = getInput2(interval)
+let input2 = getInput2(interval) //Uses the getInput2 function to generate the CSS keyframes.
 
-
+//The final CSS keyframe (it doesn't generate properly otherwise.)
 let input3 = [`
     
     100% {
@@ -208,10 +208,8 @@ const stylesheet = new CSSStyleSheet();
 
 // Add some CSS
 stylesheet.replaceSync(input1 + input2 + input3)
-// OR stylesheet.replace, which returns a Promise instead
 
 // Tell the document to adopt your new stylesheet.
-// Note that this also works with Shadow Roots.
 document.adoptedStyleSheets = [stylesheet];
 
 
