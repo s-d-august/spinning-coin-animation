@@ -59,7 +59,7 @@ body {
   background-color: var(--faceColor
 );
   animation: spin 15s alternate infinite;
-  background-image: var(--coin-face);
+  background-image: ${headImage};
   background-size: 100% 100%;
   background-position: center;
   background-blend-mode: overlay;
@@ -82,7 +82,7 @@ function getcss2(array) {
       box-shadow:
         0 0 0 var(--side-dark);
       animation-timing-function: ease-in;
-      background-image: var(--tail);
+      background-image: ${tailImage};
       background-color: var(--faceColor
     );
 }
@@ -108,7 +108,7 @@ function getcss2(array) {
       transform: translateX(${coinsize / -26.66}${unit});
       background-color: var(--lowlight);
       animation-timing-function: linear;
-      background-image: var(--tail);
+      background-image: ${tailImage};
 }
 
     ${(interval[i] + interval[i + 1]) / 2 + 0.001}% {
@@ -190,7 +190,7 @@ function getcss2(array) {
       transform: translateX(${coinsize / 26.66}${unit});
       background-color: var(--lowlight);
       animation-timing-function: ease-out;
-      background-image: var(--tail);
+      background-image: ${tailImage};
 }`)
 
   }
@@ -207,7 +207,7 @@ let css3 = [`
       box-shadow:
         0 0 0 var(--side-dark);
       animation-timing-function: ease-in;
-      background-image: var(--tail);
+      background-image: ${tailImage};
       background-color: var(--faceColor
     );
 }}`]
