@@ -1,6 +1,6 @@
 /* This code allows for the size and rotation of the coin to be changed dynamically by using CSSStylesheet or writing to <style>. */
 
-let coinsize = [10]; // sets the size of the coin in the below units. Number only.
+let coinSize = [10]; // sets the size of the coin in the below units. Number only.
 
 let unit = ['rem']; // i.e. px, in, rem
 
@@ -41,8 +41,8 @@ body {
 }
 
 .coin {
-  height: ${coinsize}${unit};
-  width: ${coinsize}${unit};
+  height: ${coinSize}${unit};
+  width: ${coinSize}${unit};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,8 +53,8 @@ body {
   content: "";
   display: block;
   position: relative;
-  height: ${coinsize}${unit};
-  width: ${coinsize}${unit};
+  height: ${coinSize}${unit};
+  width: ${coinSize}${unit};
   border-radius: 50%;
   background-color: var(--faceColor
 );
@@ -78,7 +78,7 @@ function getcss2(array) {
 
     
     ${interval[i]}% {
-    width: ${coinsize}${unit};
+    width: ${coinSize}${unit};
       box-shadow:
         0 0 0 var(--side-dark);
       animation-timing-function: ease-in;
@@ -88,55 +88,55 @@ function getcss2(array) {
 }
 
     ${(interval[i] + interval[i + 1]) / 2 - 0.001}% {
-    width: ${coinsize / 100}${unit};
+    width: ${coinSize / 100}${unit};
       box-shadow:
-        ${coinsize / 200}${unit} 0 0 var(--side),
-        ${coinsize / 100}${unit} 0 0 var(--side),
-        ${coinsize / 66.66}${unit} 0 0 var(--side),
-        ${coinsize / 50}${unit} 0 0 var(--side),
-        ${coinsize / 40}${unit} 0 0 var(--side),
-        ${coinsize / 33.33}${unit} 0 0 var(--side),
-        ${coinsize / 28.57}${unit} 0 0 var(--side),
-        ${coinsize / 25}${unit} 0 0 var(--side),
-        ${coinsize / 22.22}${unit} 0 0 var(--side),
-        ${coinsize / 20}${unit} 0 0 var(--side),
-        ${coinsize / 18.18}${unit} 0 0 var(--side),
-        ${coinsize / 16.65}${unit} 0 0 var(--side),
-        ${coinsize / 15.37}${unit} 0 0 var(--side),
-        ${coinsize / 14.28}${unit} 0 0 var(--side),
-        ${coinsize / 13.33}${unit} 0 0 var(--side);
-      transform: translateX(${coinsize / -26.66}${unit});
+        ${coinSize / 200}${unit} 0 0 var(--side),
+        ${coinSize / 100}${unit} 0 0 var(--side),
+        ${coinSize / 66.66}${unit} 0 0 var(--side),
+        ${coinSize / 50}${unit} 0 0 var(--side),
+        ${coinSize / 40}${unit} 0 0 var(--side),
+        ${coinSize / 33.33}${unit} 0 0 var(--side),
+        ${coinSize / 28.57}${unit} 0 0 var(--side),
+        ${coinSize / 25}${unit} 0 0 var(--side),
+        ${coinSize / 22.22}${unit} 0 0 var(--side),
+        ${coinSize / 20}${unit} 0 0 var(--side),
+        ${coinSize / 18.18}${unit} 0 0 var(--side),
+        ${coinSize / 16.65}${unit} 0 0 var(--side),
+        ${coinSize / 15.37}${unit} 0 0 var(--side),
+        ${coinSize / 14.28}${unit} 0 0 var(--side),
+        ${coinSize / 13.33}${unit} 0 0 var(--side);
+      transform: translateX(${coinSize / -26.66}${unit});
       background-color: var(--lowlight);
       animation-timing-function: linear;
       background-image: ${tailImage};
 }
 
     ${(interval[i] + interval[i + 1]) / 2 + 0.001}% {
-    width: ${coinsize / 100}${unit};
+    width: ${coinSize / 100}${unit};
       box-shadow:
-        ${coinsize / -200}${unit} 0 0 var(--side),
-        ${coinsize / -100}${unit} 0 0 var(--side),
-        ${coinsize / -66.66}${unit} 0 0 var(--side),
-        ${coinsize / -50}${unit} 0 0 var(--side),
-        ${coinsize / -40}${unit} 0 0 var(--side),
-        ${coinsize / -33.33}${unit} 0 0 var(--side),
-        ${coinsize / -28.57}${unit} 0 0 var(--side),
-        ${coinsize / -25}${unit} 0 0 var(--side),
-        ${coinsize / -22.22}${unit} 0 0 var(--side),
-        ${coinsize / -20}${unit} 0 0 var(--side),
-        ${coinsize / -18.18}${unit} 0 0 var(--side),
-        ${coinsize / -16.65}${unit} 0 0 var(--side),
-        ${coinsize / -15.37}${unit} 0 0 var(--side),
-        ${coinsize / -14.28}${unit} 0 0 var(--side),
-        ${coinsize / -13.33}${unit} 0 0 var(--side);
-      transform: translateX(${coinsize / 26.66}${unit});
+        ${coinSize / -200}${unit} 0 0 var(--side),
+        ${coinSize / -100}${unit} 0 0 var(--side),
+        ${coinSize / -66.66}${unit} 0 0 var(--side),
+        ${coinSize / -50}${unit} 0 0 var(--side),
+        ${coinSize / -40}${unit} 0 0 var(--side),
+        ${coinSize / -33.33}${unit} 0 0 var(--side),
+        ${coinSize / -28.57}${unit} 0 0 var(--side),
+        ${coinSize / -25}${unit} 0 0 var(--side),
+        ${coinSize / -22.22}${unit} 0 0 var(--side),
+        ${coinSize / -20}${unit} 0 0 var(--side),
+        ${coinSize / -18.18}${unit} 0 0 var(--side),
+        ${coinSize / -16.65}${unit} 0 0 var(--side),
+        ${coinSize / -15.37}${unit} 0 0 var(--side),
+        ${coinSize / -14.28}${unit} 0 0 var(--side),
+        ${coinSize / -13.33}${unit} 0 0 var(--side);
+      transform: translateX(${coinSize / 26.66}${unit});
       background-color: var(--lowlight);
       animation-timing-function: ease-out;
       background-image: ${headImage};
 }
 
   ${interval[i + 1]}% {
-    width: ${coinsize}${unit};
+    width: ${coinSize}${unit};
       box-shadow:
         0 0 0 var(--side-dark);
       animation-timing-function: ease-in;
@@ -146,48 +146,48 @@ function getcss2(array) {
 }
 
   ${(interval[i + 1] + interval[i + 2]) / 2 - 0.001}% {
-    width: ${coinsize / 100}${unit};
+    width: ${coinSize / 100}${unit};
       box-shadow:
-        ${coinsize / 200}${unit} 0 0 var(--side),
-        ${coinsize / 100}${unit} 0 0 var(--side),
-        ${coinsize / 66.66}${unit} 0 0 var(--side),
-        ${coinsize / 50}${unit} 0 0 var(--side),
-        ${coinsize / 40}${unit} 0 0 var(--side),
-        ${coinsize / 33.33}${unit} 0 0 var(--side),
-        ${coinsize / 28.57}${unit} 0 0 var(--side),
-        ${coinsize / 25}${unit} 0 0 var(--side),
-        ${coinsize / 22.22}${unit} 0 0 var(--side),
-        ${coinsize / 20}${unit} 0 0 var(--side),
-        ${coinsize / 18.18}${unit} 0 0 var(--side),
-        ${coinsize / 16.65}${unit} 0 0 var(--side),
-        ${coinsize / 15.37}${unit} 0 0 var(--side),
-        ${coinsize / 14.28}${unit} 0 0 var(--side),
-        ${coinsize / 13.33}${unit} 0 0 var(--side);
-      transform: translateX(${coinsize / -26.66}${unit});
+        ${coinSize / 200}${unit} 0 0 var(--side),
+        ${coinSize / 100}${unit} 0 0 var(--side),
+        ${coinSize / 66.66}${unit} 0 0 var(--side),
+        ${coinSize / 50}${unit} 0 0 var(--side),
+        ${coinSize / 40}${unit} 0 0 var(--side),
+        ${coinSize / 33.33}${unit} 0 0 var(--side),
+        ${coinSize / 28.57}${unit} 0 0 var(--side),
+        ${coinSize / 25}${unit} 0 0 var(--side),
+        ${coinSize / 22.22}${unit} 0 0 var(--side),
+        ${coinSize / 20}${unit} 0 0 var(--side),
+        ${coinSize / 18.18}${unit} 0 0 var(--side),
+        ${coinSize / 16.65}${unit} 0 0 var(--side),
+        ${coinSize / 15.37}${unit} 0 0 var(--side),
+        ${coinSize / 14.28}${unit} 0 0 var(--side),
+        ${coinSize / 13.33}${unit} 0 0 var(--side);
+      transform: translateX(${coinSize / -26.66}${unit});
       background-color: var(--lowlight);
       animation-timing-function: linear;
       background-image: ${headImage};
 }
 
   ${(interval[i + 1] + interval[i + 2]) / 2 + 0.001}% {
-    width: ${coinsize / 100}${unit};
+    width: ${coinSize / 100}${unit};
       box-shadow:
-        ${coinsize / -200}${unit} 0 0 var(--side),
-        ${coinsize / -100}${unit} 0 0 var(--side),
-        ${coinsize / -66.66}${unit} 0 0 var(--side),
-        ${coinsize / -50}${unit} 0 0 var(--side),
-        ${coinsize / -40}${unit} 0 0 var(--side),
-        ${coinsize / -33.33}${unit} 0 0 var(--side),
-        ${coinsize / -28.57}${unit} 0 0 var(--side),
-        ${coinsize / -25}${unit} 0 0 var(--side),
-        ${coinsize / -22.22}${unit} 0 0 var(--side),
-        ${coinsize / -20}${unit} 0 0 var(--side),
-        ${coinsize / -18.18}${unit} 0 0 var(--side),
-        ${coinsize / -16.65}${unit} 0 0 var(--side),
-        ${coinsize / -15.37}${unit} 0 0 var(--side),
-        ${coinsize / -14.28}${unit} 0 0 var(--side),
-        ${coinsize / -13.33}${unit} 0 0 var(--side);
-      transform: translateX(${coinsize / 26.66}${unit});
+        ${coinSize / -200}${unit} 0 0 var(--side),
+        ${coinSize / -100}${unit} 0 0 var(--side),
+        ${coinSize / -66.66}${unit} 0 0 var(--side),
+        ${coinSize / -50}${unit} 0 0 var(--side),
+        ${coinSize / -40}${unit} 0 0 var(--side),
+        ${coinSize / -33.33}${unit} 0 0 var(--side),
+        ${coinSize / -28.57}${unit} 0 0 var(--side),
+        ${coinSize / -25}${unit} 0 0 var(--side),
+        ${coinSize / -22.22}${unit} 0 0 var(--side),
+        ${coinSize / -20}${unit} 0 0 var(--side),
+        ${coinSize / -18.18}${unit} 0 0 var(--side),
+        ${coinSize / -16.65}${unit} 0 0 var(--side),
+        ${coinSize / -15.37}${unit} 0 0 var(--side),
+        ${coinSize / -14.28}${unit} 0 0 var(--side),
+        ${coinSize / -13.33}${unit} 0 0 var(--side);
+      transform: translateX(${coinSize / 26.66}${unit});
       background-color: var(--lowlight);
       animation-timing-function: ease-out;
       background-image: ${tailImage};
@@ -203,7 +203,7 @@ let css2 = getcss2(interval) //Uses the getcss2 function to generate the CSS key
 let css3 = [`
     
     100% {
-    width: ${coinsize}${unit};
+    width: ${coinSize}${unit};
       box-shadow:
         0 0 0 var(--side-dark);
       animation-timing-function: ease-in;
