@@ -1,10 +1,13 @@
 /* This code allows for the size and rotation of the coin to be changed dynamically by using CSSStylesheet or writing to <style>. */
 
-let coinsize = [5]; // number only
+let coinsize = [10]; // sets the size of the coin in the below units. Number only.
 
 let unit = ['rem']; // i.e. px, in, rem
 
 let backgroundColor = ['#f0efff'] // string should be formatted for CSS -- hex, RGB, and valid color names are acceptable
+
+let headImage = ['url("crown.png")'] // link to the image for the HEADS side of the coin, formatted for CSS. Can be local or external.
+let tailImage = ['url("knife.png")'] // same as above, for TAILS
 
 let interval = [0, 12.5, 21.5, 30, 38, 45.5, 52.5, 59, 65, 70.5, 75.5, 80, 84, 87.5, 90.5, 93, 95, 96, 97, 97.5, 98, 98.5, 99, 99.5, 100];
 /* Timing intervals for each rotation, based on CSS animation keyframes. 
@@ -23,8 +26,6 @@ let css1 = [`
   --lowlight: #111;
   --side: #6F6F6F;
   --side-dark: #0e0e0e;
-  --head: url("crown.png");
-  --tail: url("knife.png");
 }
 
 html {
@@ -129,7 +130,7 @@ function getcss2(array) {
       transform: translateX(${coinsize / 26.66}${unit});
       background-color: var(--lowlight);
       animation-timing-function: ease-out;
-      background-image: var(--head);
+      background-image: ${headImage};
 }
 
   ${interval[i + 1]}% {
@@ -137,7 +138,7 @@ function getcss2(array) {
       box-shadow:
         0 0 0 var(--side-dark);
       animation-timing-function: ease-in;
-      background-image: var(--head);
+      background-image: ${headImage};
       background-color: var(--face);
 }
 
@@ -162,7 +163,7 @@ function getcss2(array) {
       transform: translateX(${coinsize / -26.66}${unit});
       background-color: var(--lowlight);
       animation-timing-function: linear;
-      background-image: var(--head);
+      background-image: ${headImage};
 }
 
   ${(interval[i + 1] + interval[i + 2]) / 2 + 0.001}% {
