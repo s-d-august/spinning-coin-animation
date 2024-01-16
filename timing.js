@@ -22,7 +22,6 @@ let css1 = [`
   --side-dark: #0e0e0e;
   --head: url("crown.png");
   --tail: url("knife.png");
-  --coinsize: ${coinsize}${unit};
 }
 
 html {
