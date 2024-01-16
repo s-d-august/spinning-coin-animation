@@ -1,15 +1,14 @@
 /* This code generates CSS keyframes for a given size of coin and given intervals of rotation. */
 
-
-let coinsize = [10]; // number only
+let coinsize = [5]; // number only
 
 let unit = ['rem']; // i.e. px, in, rem
   
 let interval = [0, 12.5, 21.5, 30, 38, 45.5, 52.5, 59, 65, 70.5, 75.5, 80, 84, 87.5, 90.5, 93, 95, 96, 97, 97.5, 98, 98.5, 99, 99.5, 100];
   
-document.write(`
+let input1 = [`
 
-<style>
+
 :root {
   --face: #a0a0a0;
   --lowlight: #111;
@@ -57,10 +56,10 @@ body {
   filter: saturate(0);
   animation-delay: -0.5s;
 }  @keyframes spin {`
-)
+]
 
   for (let i = 0; i < (interval.length - 1); i = i + 2) {
-    document.write(`
+    let input2 = [`
 
     
     ${interval[i]}% {
@@ -70,7 +69,7 @@ body {
       animation-timing-function: ease-in;
       background-image: var(--tail);
       background-color: var(--face);
-}<br><br>
+}
 
     ${(interval[i] + interval[i + 1]) / 2 - 0.001}% {
     width: ${coinsize / 100}${unit};
@@ -94,7 +93,7 @@ body {
       background-color: var(--lowlight);
       animation-timing-function: linear;
       background-image: var(--tail);
-}<br><br>
+}
 
     ${(interval[i] + interval[i + 1]) / 2 + 0.001}% {
     width: ${coinsize / 100}${unit};
@@ -118,7 +117,7 @@ body {
       background-color: var(--lowlight);
       animation-timing-function: ease-out;
       background-image: var(--head);
-}<br><br>
+}
 
   ${interval[i + 1]}% {
     width: ${coinsize}${unit};
@@ -127,7 +126,7 @@ body {
       animation-timing-function: ease-in;
       background-image: var(--head);
       background-color: var(--face);
-}<br><br>
+}
 
   ${(interval[i + 1] + interval[i + 2]) / 2 - 0.001}% {
     width: ${coinsize / 100}${unit};
@@ -151,7 +150,7 @@ body {
       background-color: var(--lowlight);
       animation-timing-function: linear;
       background-image: var(--head);
-}<br><br>
+}
 
                    ${(interval[i + 1] + interval[i + 2]) / 2 + 0.001}% {
     width: ${coinsize / 100}${unit};
@@ -175,12 +174,12 @@ body {
       background-color: var(--lowlight);
       animation-timing-function: ease-out;
       background-image: var(--tail);
-}<br><br>`
+}`
 
-    )
+]
   }
 
-document.write(`
+let input3 = [`
     
     100% {
     width: ${coinsize}${unit};
@@ -189,5 +188,19 @@ document.write(`
       animation-timing-function: ease-in;
       background-image: var(--tail);
       background-color: var(--face);
-}}
-</style>`)
+}}`]
+
+
+
+// Construct the CSSStyleSheet
+const stylesheet = new CSSStyleSheet();
+
+// Add some CSS
+stylesheet.replaceSync(input1 + input2 + input3)
+// OR stylesheet.replace, which returns a Promise instead
+
+// Tell the document to adopt your new stylesheet.
+// Note that this also works with Shadow Roots.
+document.adoptedStyleSheets = [stylesheet];
+
+
