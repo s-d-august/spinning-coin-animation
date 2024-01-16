@@ -5,7 +5,9 @@ let coinsize = [5]; // number only
 let unit = ['rem']; // i.e. px, in, rem
   
 let interval = [0, 12.5, 21.5, 30, 38, 45.5, 52.5, 59, 65, 70.5, 75.5, 80, 84, 87.5, 90.5, 93, 95, 96, 97, 97.5, 98, 98.5, 99, 99.5, 100];
-  
+// Timing intervals for each rotation, based on CSS animation keyframes
+ 
+// Everything up to the start of the keyframes, which are generated on a loop
 let input1 = [`
 
 
@@ -58,8 +60,13 @@ body {
 }  @keyframes spin {`
 ]
 
-  for (let i = 0; i < (interval.length - 1); i = i + 2) {
-    let input2 = [`
+//The function to generate the spinning animation
+
+function getInput2(array) {
+  var output = '';
+
+  for (let i = 0; i < (array.length - 1); i = i + 2) {
+    output += (`
 
     
     ${interval[i]}% {
@@ -174,10 +181,14 @@ body {
       background-color: var(--lowlight);
       animation-timing-function: ease-out;
       background-image: var(--tail);
-}`
+}`)
 
-]
   }
+return output;
+}
+
+let input2 = getInput2(interval)
+
 
 let input3 = [`
     
