@@ -1,6 +1,6 @@
 /* This code generates CSS keyframes for a given size of coin and given intervals of rotation. */
 
-let coinsize = [5]; // number only
+let coinsize = [10]; // number only
 
 let unit = ['rem']; // i.e. px, in, rem
   
