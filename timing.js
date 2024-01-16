@@ -1,11 +1,15 @@
 /* This code allows for the size and rotation of the coin to be changed dynamically by using CSSStylesheet. */
 
-let coinsize = [10]; // number only
+let coinsize = [5]; // number only
 
 let unit = ['rem']; // i.e. px, in, rem
 
 let interval = [0, 12.5, 21.5, 30, 38, 45.5, 52.5, 59, 65, 70.5, 75.5, 80, 84, 87.5, 90.5, 93, 95, 96, 97, 97.5, 98, 98.5, 99, 99.5, 100];
-// Timing intervals for each rotation, based on CSS animation keyframes
+/* Timing intervals for each rotation, based on CSS animation keyframes. 
+Each value represents one spin, from face to face; the numbers are the percentage the animation is complete.
+Smaller intervals = faster spinning, larger intervals = slower spinning.*/
+
+/* */
 
 // Everything up to the start of the keyframes, which are generated on a loop
 let css1 = [`
@@ -201,7 +205,10 @@ let css3 = [`
       background-color: var(--face);
 }}`]
 
+/* ONLY ONE OF THE BELOW SHOULD BE OPERATIONAL -- EITHER OVERRIDE STYLESHEET OR WRITE TO <style>
+   MAKE SURE THE OTHER IS COMMENTED OUT! */
 
+/* TO OVERRIDE STYLESHEET -- INSERT <script src="timing.js"></script> IN BODY
 
 // Construct the CSSStyleSheet
 const stylesheet = new CSSStyleSheet();
@@ -212,4 +219,8 @@ stylesheet.replaceSync(css1 + css2 + css3)
 // Tell the document to adopt your new stylesheet.
 document.adoptedStyleSheets = [stylesheet];
 
+*/
 
+//TO WRITE TO <style> -- INSERT <script src="timing.js"></script> IN HEAD
+
+document.write('<style>' + css1 + css2 + css3 + '</style>')
