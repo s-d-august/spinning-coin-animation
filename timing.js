@@ -4,6 +4,8 @@ let coinsize = [5]; // number only
 
 let unit = ['rem']; // i.e. px, in, rem
 
+let backgroundColor = ['#f0efff'] // string should be formatted for CSS -- hex, RGB, and valid color names are acceptable
+
 let interval = [0, 12.5, 21.5, 30, 38, 45.5, 52.5, 59, 65, 70.5, 75.5, 80, 84, 87.5, 90.5, 93, 95, 96, 97, 97.5, 98, 98.5, 99, 99.5, 100];
 /* Timing intervals for each rotation, based on CSS animation keyframes. 
 Each value represents one spin, from face to face; the numbers are the percentage the animation is complete.
@@ -31,7 +33,7 @@ html {
 
 body {
   height: 100%;
-  background-color: #f0efff;
+  background-color: ${backgroundColor};
   display: flex;
   justify-content: center;
   align-items: center;
