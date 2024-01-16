@@ -228,6 +228,6 @@ document.adoptedStyleSheets = [stylesheet];
 
 */
 
-//TO WRITE TO <style> -- INSERT <script src="timing.js"></script> IN HEAD
+//TO WRITE TO <style> -- INSERT <script src="timing.js"></script> IN HEAD (or body I guess)
 
 document.write('<style>' + css1 + css2 + css3 + '</style>')
