@@ -58,9 +58,8 @@ body {
   height: ${coinSize}${unit};
   width: ${coinSize}${unit};
   border-radius: 50%;
-  background-color: var(--faceColor
-);
-  animation: spin ${animationTime}s alternate infinite;
+  background-color: var(--faceColor);
+  animation: spin ${animationTime}s ${animationDirection} infinite;
   background-image: ${headImage};
   background-size: 100% 100%;
   background-position: center;
@@ -85,8 +84,7 @@ function getcss2(array) {
         0 0 0 var(--side-dark);
       animation-timing-function: ease-in;
       background-image: ${tailImage};
-      background-color: var(--faceColor
-    );
+      background-color: var(--faceColor);
 }
 
     ${(interval[i] + interval[i + 1]) / 2 - 0.001}% {
@@ -143,8 +141,7 @@ function getcss2(array) {
         0 0 0 var(--side-dark);
       animation-timing-function: ease-in;
       background-image: ${headImage};
-      background-color: var(--faceColor
-    );
+      background-color: var(--faceColor);
 }
 
   ${(interval[i + 1] + interval[i + 2]) / 2 - 0.001}% {
@@ -210,8 +207,7 @@ let css3 = [`
         0 0 0 var(--side-dark);
       animation-timing-function: ease-in;
       background-image: ${tailImage};
-      background-color: var(--faceColor
-    );
+      background-color: var(--faceColor);
 }}`]
 
 /* ONLY ONE OF THE BELOW SHOULD BE OPERATIONAL -- EITHER OVERRIDE STYLESHEET OR WRITE TO <style>
