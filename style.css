@@ -43,6 +43,28 @@ body {
   grid-template-columns: 1fr;
   width: auto;
   height: auto;
+
+}
+
+.menu__item {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: black solid 1px;
+
+}
+
+
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.header__item {
+  margin: 0;
+  text-align: center;
 }
 
 .coinwrap {
