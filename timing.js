@@ -1,8 +1,8 @@
 /* This code allows for the size and rotation of the coin to be changed dynamically by using CSSStylesheet or writing to <style>. */
 
-let coinSize = [10]; // sets the size of the coin in the below units. Number only.
+let coinSize = [250]; // sets the size of the coin in the below units. Number only.
 
-let unit = ['rem']; // i.e. px, in, rem
+let unit = ['px']; // i.e. px, in, rem
 
 let backgroundColor = ['#f0efff']; // string should be formatted for CSS -- hex, RGB, and valid color names are acceptable
 

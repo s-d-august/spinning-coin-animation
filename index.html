@@ -8,14 +8,39 @@
         content="'We are separate and yet simultaneous, two sides of a spinning coin, a coin spinning so fast that we often look like a solid and seamless sphere, but we are not: we have faces.'">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="crown.png">
     <title>Two-Sided Spinning Coin</title>
 </head>
 
 <body>
-    <div class="coin"></div>
-    <script src="timing.js"></script>
+
+    <script src="timingVOID.js"></script>
+
+    <div class="menu__position">
+        <div class="menu__style">
+            <nav class="menu">
+                <div class="menu__item header"></div>
+                <div class="menu__item toggle">
+                    <div class="accel"></div>
+                    <div class="even"></div>
+                </div>
+                <div class="menu__item size"></div>
+                <div class="menu__item image"></div>
+                <div class="menu__item speed"></div>
+                <div class="menu__item background"></div>
+                <div class="menu__item output"></div>
+            </nav>
+        </div>
+
+        <div class="flexbuffer"></div>
+    <div class="coinwrap">
+        <div class="flexbuffer"></div>
+        <div class="coin"></div>
+        <div class="flexbuffer"></div>
+    </div>
+    <div class="flexbuffer"></div>
+</div>
 </body>
 
 </html>

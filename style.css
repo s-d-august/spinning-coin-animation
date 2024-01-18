@@ -16,8 +16,47 @@ body {
   height: 100%;
   background-color: #f0efff;
   display: flex;
+  flex-direction: row;
+}
+
+.menu__position {
+  width: 100%;
+  display: flex;
+  flex: 0 1 0 1;
+
+}
+
+.menu__style {
+  width: 250px;
+  height: auto;
+  outline: black solid 5px;
+  background-color: #6F6F6F;
+  flex-grow: 0;
+  margin: 20px;
+  margin-right: 0;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: auto;
+  height: auto;
+}
+
+.coinwrap {
+  flex-grow: 1;
+  flex: 1 0 1;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+}
+
+.flexbuffer {
+  flex-grow: 1;
 }
 
 .coin {
@@ -27,6 +66,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-grow: 0;
+  margin: 50px;
 }
 
 .coin::before {
