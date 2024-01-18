@@ -67,6 +67,20 @@ body {
   text-align: center;
 }
 
+.spinstyle button {
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  border: none;
+  padding: 5px
+}
+
+.spinstyle button:hover {
+  background-color: #464646;
+  cursor: pointer;
+}
+
 .coinwrap {
   flex-grow: 1;
   flex: 1 0 1;
