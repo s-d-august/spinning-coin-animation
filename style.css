@@ -53,7 +53,6 @@ p {
 .menu__item {
   width: 100%;
   height: auto;
-  border-bottom: black solid 1px;
 
 }
 
@@ -62,6 +61,7 @@ p {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-top: 10px;
   padding-bottom: 10px;
+  border-bottom: black solid 1px;
 }
 
 .header__item {
@@ -75,11 +75,13 @@ p {
   width: 100%;
   text-align: center;
   border: none;
+  border-bottom: black solid 1px;
   padding: 5px
 }
 
 .spinstyle button:hover {
-  background-color: #464646;
+  background-color: #d3d3d3;
+  color: #0e0e0e;
   cursor: pointer;
 }
 
@@ -87,9 +89,14 @@ p {
   background-color: #464646;
 }
 
+#spinstyle__alt {
+  border-bottom: black solid 1px;
+}
+
 .speed {
   width: 100%; /* Width of the outside container */
   padding-bottom: 10px;
+  border-bottom: black solid 1px;
 }
 
 /* The slider itself */
@@ -103,7 +110,6 @@ p {
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
-  border-radius: 3px;
 }
 
 /* Mouse-over effects */
