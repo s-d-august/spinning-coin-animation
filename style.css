@@ -83,6 +83,10 @@ p {
   cursor: pointer;
 }
 
+.spinstyle .spinstyle__button--active {
+  background-color: #464646;
+}
+
 .speed {
   width: 100%; /* Width of the outside container */
   padding-bottom: 10px;
