@@ -21,8 +21,9 @@ body {
   flex-direction: row;
 }
 
-p {
+label {
   text-align: center;
+  justify-content: center;
 }
 
 .hint { /* <a href="https://www.flaticon.com/free-icons/question" title="question icons">Question icons created by Freepik - Flaticon</a> */
@@ -130,6 +131,8 @@ button:hover {
 .speed {
   width: 100%; /* Width of the outside container */
   padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 
 }
 
@@ -141,8 +144,8 @@ button:hover {
   font-size: small;
 }
 
-.speed__title {
-  margin: 15px 0 0 0;
+.title {
+  margin-top: 15px;
 }
 
 /* The slider itself */
@@ -183,13 +186,24 @@ button:hover {
 
 .bgColor {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+  width: 100%;
+}
 
+#bgColor__input {
+  align-items: center;
+  max-width: 75%;
+}
+
+.bgImg {
+  display: flex;
+  flex-direction: column;
 }
 
 #bgImg__input {
-  margin: auto;
+  width: 90%;
+  margin: 15px 10px;
 }
 
 .coinwrap {
