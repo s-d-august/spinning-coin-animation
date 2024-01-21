@@ -53,7 +53,7 @@ p {
 .menu__item {
   width: 100%;
   height: auto;
-
+border-bottom: black 1px solid;
 }
 
 .header {
@@ -75,7 +75,7 @@ button {
   width: 100%;
   text-align: center;
   border: none;
-  border-bottom: black solid 1px;
+
   padding: 5px;
 }
 
@@ -103,7 +103,7 @@ button:hover {
 .speed {
   width: 100%; /* Width of the outside container */
   padding-bottom: 10px;
-  border-bottom: black solid 1px;
+
 }
 
 .speed__label, .speed__label p {
