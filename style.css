@@ -75,6 +75,10 @@ cursor: help;
   border-radius: 5px;
 }
 
+#about__button {
+  font-weight: 900;
+}
+
 .about__title {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
