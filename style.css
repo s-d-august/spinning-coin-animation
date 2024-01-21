@@ -127,6 +127,10 @@ button:hover {
 
 .size__label {
   margin: 15px 5px;
+.coin-img__line1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .speed {
@@ -197,12 +201,12 @@ button:hover {
   max-width: 75%;
 }
 
-.bgImg {
+.bgImg, .coin-img {
   display: flex;
   flex-direction: column;
 }
 
-#bgImg__input {
+#bgImg__input, #coin-img__input {
   width: 90%;
   margin: 15px 10px;
 }
