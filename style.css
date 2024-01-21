@@ -190,6 +190,9 @@ border-radius: 3px;
   align-items: center;
 }
 
+#bgImg__input {
+  margin: auto;
+}
 
 .coinwrap {
   flex-grow: 1;
