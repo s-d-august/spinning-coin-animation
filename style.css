@@ -29,7 +29,8 @@ label {
 .icon { /* <a href="https://www.flaticon.com/free-icons/question" title="question icons">Question icons created by Freepik - Flaticon</a> */
         /* <a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by Google - Flaticon</a> */
 width: 12px;
-height: auto;
+height: 12px;
+margin-right: 5px;
 }
 
 .UI__position {
