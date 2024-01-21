@@ -41,10 +41,16 @@
                     <button type="button" id="spinstyle__steady">STEADY</button>
                 </div>
                 <form>
-                    
-                    <div class="menu__item size">
-                        <label for="size">COIN SIZE</label>
-                        <input type="text" id="size" name="size">
+
+                    <div class="menu__item">
+                        <div class="size">
+                            <div class="size__label">
+                                <label for="size" >COIN SIZE</label>
+                                <img class="hint" src="question.png" title="Input number and unit. If no unit is given, defaults to pixels.">
+                            </div>
+                            
+                            <input type="text" id="size" name="size" class="size__input" placeholder="150 px">
+                        </div>
                     </div>
 
                     <div class="menu__item image"></div>
