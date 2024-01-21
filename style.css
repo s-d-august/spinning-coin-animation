@@ -28,6 +28,13 @@ label {
   font-weight: var(--font-weight);
 }
 
+#about {
+  color: black;
+  background-color: #e2e2e2;
+  border-bottom: black solid 10px;
+}
+
+
 input::placeholder {
   font-weight: 400;
 }
@@ -48,7 +55,7 @@ cursor: help;
 .UI__position {
   width: 100%;
   display: flex;
-  flex: 0 1 0 1;
+  flex: 0 1 0 1 0;
 
 }
 
@@ -59,9 +66,10 @@ cursor: help;
   background-color: #8d8d8d;
   flex-grow: 0;
   margin: 20px;
-  margin-right: 0;
   border-radius: 5px;
 }
+
+.aboutpanel
 
 .menu {
   display: grid;
@@ -129,6 +137,8 @@ button:hover {
   color: #0e0e0e;
   cursor: pointer;
 }
+
+
 
 .spinstyle__button--active {
   background-color: #5a5a5a;
