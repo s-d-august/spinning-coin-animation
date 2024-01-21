@@ -69,7 +69,7 @@ cursor: help;
   border-radius: 5px;
 }
 
-.about {
+.about__title {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding-top: 10px;
@@ -264,6 +264,10 @@ textarea {
 
 .reset {
   background-color: rgb(144, 0, 0);
+}
+
+.about__text {
+  padding: 0 10px;
 }
 
 .coinwrap {
