@@ -82,15 +82,16 @@ border-bottom: var(--border-bottom);
   border-top: 3px black solid;
 }
 
-.header {
+.coinspin {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom: black solid 5px;
+  background-color: black;
+  color: white;
 }
 
-.header__item {
+.title__item {
   margin: 0;
   text-align: center;
 }
