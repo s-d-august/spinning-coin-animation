@@ -24,14 +24,14 @@ p {
   text-align: center;
 }
 
-.menu__position {
+.UI__position {
   width: 100%;
   display: flex;
   flex: 0 1 0 1;
 
 }
 
-.menu__style {
+.UI__style {
   width: 250px;
   height: auto;
   outline: black solid 5px;
@@ -69,14 +69,14 @@ p {
   text-align: center;
 }
 
-.spinstyle button {
+button {
   background-color: black;
   color: white;
   width: 100%;
   text-align: center;
   border: none;
   border-bottom: black solid 1px;
-  padding: 5px
+  padding: 5px;
 }
 
 .spinstyle button:hover {
