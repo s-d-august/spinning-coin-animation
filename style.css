@@ -7,6 +7,7 @@
   --tail: url("knife.png");
   --coinsize: 50px;
   --border-bottom: 2px black solid;
+  --font-weight: 600;
 }
 
 html {
@@ -24,6 +25,11 @@ body {
 label {
   text-align: center;
   justify-content: center;
+  font-weight: var(--font-weight);
+}
+
+input::placeholder {
+  font-weight: 400;
 }
 
 .icon { /* <a href="https://www.flaticon.com/free-icons/question" title="question icons">Question icons created by Freepik - Flaticon</a> */
@@ -31,6 +37,12 @@ label {
 width: 12px;
 height: 12px;
 margin-right: 5px;
+cursor: help;
+}
+
+.hide {
+  visibility: hidden;
+  cursor: auto;
 }
 
 .UI__position {
@@ -44,7 +56,7 @@ margin-right: 5px;
   width: 250px;
   height: auto;
   outline: black solid 5px;
-  background-color: #6F6F6F;
+  background-color: #8d8d8d;
   flex-grow: 0;
   margin: 20px;
   margin-right: 0;
@@ -71,7 +83,7 @@ border-bottom: var(--border-bottom);
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom: var(--border-bottom);
+  border-bottom: black solid 5px;
 }
 
 .header__item {
@@ -104,6 +116,7 @@ button {
   padding: 5px;
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: background-color color .2s;
+  font-weight: var(--font-weight);
 }
 
 button:hover {
