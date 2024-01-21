@@ -28,7 +28,7 @@ label {
   font-weight: var(--font-weight);
 }
 
-#about {
+#about__button {
   color: black;
   background-color: #e2e2e2;
   border-bottom: black solid 10px;
@@ -69,7 +69,14 @@ cursor: help;
   border-radius: 5px;
 }
 
-.aboutpanel
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: black;
+  color: white;
+}
 
 .menu {
   display: grid;
