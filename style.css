@@ -114,7 +114,7 @@ border-bottom: var(--border-bottom);
 
 .menu__item:last-child {
   border-bottom: none;
-  border-top: 3px black solid;
+  border-top: 8px black solid;
 }
 
 .coinspin {
