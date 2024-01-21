@@ -26,7 +26,8 @@ label {
   justify-content: center;
 }
 
-.hint { /* <a href="https://www.flaticon.com/free-icons/question" title="question icons">Question icons created by Freepik - Flaticon</a> */
+.icon { /* <a href="https://www.flaticon.com/free-icons/question" title="question icons">Question icons created by Freepik - Flaticon</a> */
+        /* <a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by Google - Flaticon</a> */
 width: 12px;
 height: auto;
 }
