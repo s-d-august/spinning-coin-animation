@@ -79,13 +79,13 @@ button {
   padding: 5px;
 }
 
-.spinstyle button:hover {
+button:hover {
   background-color: #d3d3d3;
   color: #0e0e0e;
   cursor: pointer;
 }
 
-.spinstyle .spinstyle__button--active {
+.spinstyle__button--active {
   background-color: #464646;
 }
 
@@ -93,10 +93,26 @@ button {
   border-bottom: black solid 1px;
 }
 
+.size {
+  
+}
+
 .speed {
   width: 100%; /* Width of the outside container */
   padding-bottom: 10px;
   border-bottom: black solid 1px;
+}
+
+.speed__label, .speed__label p {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0 3px;
+  font-size: small;
+}
+
+.speed__title {
+  margin: 15px 0 0 0;
 }
 
 /* The slider itself */
@@ -171,7 +187,7 @@ button {
   width: 10rem;
   border-radius: 50%;
   background-color: var(--face);
-  animation: spin 15s alternate infinite;
+  animation: spinVOID 15s alternate infinite;
   background-image: var(--coin-face);
   background-size: 100% 100%;
   background-position: center;

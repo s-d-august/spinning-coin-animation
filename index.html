@@ -40,17 +40,25 @@
                         FAST</button><br>
                     <button type="button" id="spinstyle__steady">STEADY</button>
                 </div>
-                <div class="menu__item size"></div>
-                <div class="menu__item image"></div>
-                <div class="menu__item speed">
-                    <p>SPIN SPEED</p>
-                    <input type="range" min="1" max="11" value="6" class="slider" id="myRange">
-                </div>
-                <div class="menu__item background"></div>
-                <div class="menu__item reset">
-                    <input type="reset">
-                </div>
-                <div class="menu__item output"></div>
+                <form>
+                    <div class="menu__item size"></div>
+                    <input type="text" id="size" name="size">
+                    <div class="menu__item image"></div>
+                    <div class="menu__item speed">
+                        <p class="speed__title">SPIN SPEED</p>
+                        <div class="speed__label">
+                            <p>slow</p>
+                            <div class="flexbuffer"></div>
+                            <p>fast</p>
+                        </div>
+                        <input type="range" min="1" max="11" value="6" class="slider" id="myRange">
+                    </div>
+                    <div class="menu__item background"></div>
+                    <div class="menu__item reset button">
+                        <button type="reset">RESET</button>
+                    </div>
+                    <div class="menu__item output"></div>
+                </form>
             </nav>
         </div>
 
