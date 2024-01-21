@@ -136,7 +136,7 @@ button:hover {
   width: 100px;
 }
 
-.coin-img__line1 {
+.coin-img__line1, .coin-img__line2 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -213,12 +213,17 @@ button:hover {
 .bgImg, .coin-img {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#bgImg__input, #coin-img__input {
-  width: 90%;
-  margin: 15px 10px;
+#coin-img__input2 {
+  width: auto;
+  margin-top: 0;
+  justify-self: left;
 }
+
+
 
 .coinwrap {
   flex-grow: 1;
