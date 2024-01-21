@@ -54,7 +54,7 @@ cursor: help;
 
 .UI__style {
   width: 250px;
-  height: auto;
+  height: fit-content;
   outline: black solid 5px;
   background-color: #8d8d8d;
   flex-grow: 0;
@@ -75,7 +75,11 @@ cursor: help;
   width: 100%;
   height: auto;
 border-bottom: var(--border-bottom);
+}
 
+.menu__item:last-child {
+  border-bottom: none;
+  border-top: 3px black solid;
 }
 
 .header {
@@ -95,7 +99,7 @@ input {
   border: 0;
   outline: none;
   width: 90%;
-  background-color: #d3d3d3;
+  background-color: #e2e2e2;
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
@@ -108,7 +112,7 @@ input:hover {
 }
 
 button {
-  background-color: black;
+  background-color: #282828;
   color: white;
   width: 100%;
   text-align: center;
@@ -126,7 +130,7 @@ button:hover {
 }
 
 .spinstyle__button--active {
-  background-color: #464646;
+  background-color: #5a5a5a;
 }
 
 #spinstyle__alt {
@@ -236,7 +240,13 @@ button:hover {
   justify-self: left;
 }
 
+textarea {
+  width: 100%;
+}
 
+.reset {
+  background-color: rgb(144, 0, 0);
+}
 
 .coinwrap {
   flex-grow: 1;
