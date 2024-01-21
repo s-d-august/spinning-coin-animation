@@ -6,6 +6,7 @@
   --head: url("crown.png");
   --tail: url("knife.png");
   --coinsize: 50px;
+  --border-bottom: 2px black solid;
 }
 
 html {
@@ -58,7 +59,7 @@ height: auto;
 .menu__item {
   width: 100%;
   height: auto;
-border-bottom: black 1px solid;
+border-bottom: var(--border-bottom);
 
 }
 
@@ -67,7 +68,7 @@ border-bottom: black 1px solid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom: black solid 1px;
+  border-bottom: var(--border-bottom);
 }
 
 .header__item {
@@ -97,7 +98,7 @@ button:hover {
 }
 
 #spinstyle__alt {
-  border-bottom: black solid 1px;
+  border-bottom: var(--border-bottom);
 }
 
 .size {
