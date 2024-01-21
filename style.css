@@ -223,7 +223,7 @@ button:hover {
   width: 100px;
 }
 
-.bgImg, .coin-img {
+.bgImg, .coin-img, .output {
   display: flex;
   flex-direction: column;
   justify-content: center;

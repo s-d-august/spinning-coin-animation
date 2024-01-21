@@ -87,10 +87,15 @@
                         <input type="url" id="bgImg__input" placeholder="paste URL here">
                     </div>
 
-                    <div class="menu__item reset button">
-                        <button type="reset">RESET</button>
+                    <div class="menu__item output">
+                        <button onclick="getCSS()">COPY CSS</button>
+                        <textarea readonly name="css-output" id="css-output" value="cssOutput"></textarea>
                     </div>
-                    <div class="menu__item output"></div>
+
+                    <div class="menu__item button">
+                        <button class="reset" type="reset">RESET</button>
+                    </div>
+
                 </form>
             </nav>
         </div>
