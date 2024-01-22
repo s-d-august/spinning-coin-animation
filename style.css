@@ -44,6 +44,9 @@ label {
   font-weight: var(--font-weight);
 }
 
+
+
+
 #about__button {
   color: black;
   background-color: #e2e2e2;
@@ -78,11 +81,13 @@ cursor: help;
 .UI__style {
   width: 250px;
   height: fit-content;
+max-height: 100%;
   outline: black solid 5px;
   background-color: #a0a0a0;
   flex-grow: 0;
   margin: 20px;
   border-radius: 5px;
+  overflow-y: auto;
 }
 
 #about__button {
@@ -111,9 +116,9 @@ cursor: help;
 .menu {
   display: grid;
   grid-template-columns: 1fr;
-  width: auto;
-  height: auto;
-
+  width: 100%;
+height: auto;
+overflow-y: auto;
 }
 
 .menu__item {
