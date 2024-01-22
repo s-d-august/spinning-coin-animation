@@ -296,6 +296,11 @@ textarea {
   width: 100%;
 }
 
+#css-output {
+  width: 100%;
+padding: 0;
+}
+
 .reset {
   background-color: rgb(144, 0, 0);
 }
