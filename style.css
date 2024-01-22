@@ -20,6 +20,11 @@ body {
   background-color: #f0efff;
   display: flex;
   flex-direction: row;
+
+}
+
+p {
+  line-height: 1.3;
 }
 
 h2 {
