@@ -9,6 +9,7 @@
   --border-bottom: 2px black solid;
   --font-weight: 600;
 }
+
 * {
   padding: none;
   border: none;
@@ -25,7 +26,6 @@ body {
   background-color: #f0efff;
   display: flex;
   flex-direction: row;
-
 }
 
 p {
@@ -45,26 +45,23 @@ label {
   font-weight: var(--font-weight);
 }
 
-
-
-
 #about__button {
   color: black;
   background-color: #e2e2e2;
   border-bottom: black solid 10px;
 }
 
-
 input::placeholder {
   font-weight: 400;
 }
 
-.icon { /* <a href="https://www.flaticon.com/free-icons/question" title="question icons">Question icons created by Freepik - Flaticon</a> */
-        /* <a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by Google - Flaticon</a> */
-width: 12px;
-height: 12px;
-margin-right: 5px;
-cursor: help;
+.icon {
+  /* <a href="https://www.flaticon.com/free-icons/question" title="question icons">Question icons created by Freepik - Flaticon</a> */
+  /* <a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by Google - Flaticon</a> */
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  cursor: help;
 }
 
 .hide {
@@ -76,13 +73,12 @@ cursor: help;
   width: 100%;
   display: flex;
   flex: 0 1 0 1 0;
-
 }
 
 .UI__style {
   width: 250px;
   height: fit-content;
-max-height: 100%;
+  max-height: 100%;
   outline: black solid 5px;
   background-color: #a0a0a0;
   flex-grow: 0;
@@ -118,14 +114,14 @@ max-height: 100%;
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-height: auto;
-overflow-y: auto;
+  height: auto;
+  overflow-y: auto;
 }
 
 .menu__item {
   width: 100%;
   height: auto;
-border-bottom: var(--border-bottom);
+  border-bottom: var(--border-bottom);
 }
 
 .menu__item:last-child {
@@ -156,8 +152,10 @@ input {
   outline: none;
   width: 90%;
   background-color: #e2e2e2;
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
   transition: opacity .2s;
   margin: 15px 5px;
   border-radius: 3px;
@@ -174,7 +172,8 @@ button {
   text-align: center;
   border: none;
   padding: 5px;
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
   transition: background-color color .2s;
   font-weight: var(--font-weight);
 }
@@ -184,8 +183,6 @@ button:hover {
   color: #0e0e0e;
   cursor: pointer;
 }
-
-
 
 .spinstyle__button--active {
   background-color: #5a5a5a;
@@ -211,21 +208,23 @@ button:hover {
   width: 100px;
 }
 
-.coin-img__line1, .coin-img__line2 {
+.coin-img__line1,
+.coin-img__line2 {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
 .speed {
-  width: 100%; /* Width of the outside container */
+  width: 100%;
+  /* Width of the outside container */
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
-
 }
 
-.speed__label, .speed__label p {
+.speed__label,
+.speed__label p {
   display: flex;
   flex-direction: row;
   margin: 0;
@@ -239,36 +238,49 @@ button:hover {
 
 /* The slider itself */
 .slider {
-  -webkit-appearance: none;  /* Override default CSS styles */
+  -webkit-appearance: none;
+  /* Override default CSS styles */
   appearance: none;
-  width: 100%; /* Full-width */
-  height: 15px; /* Specified height */
+  width: 100%;
+  /* Full-width */
+  height: 15px;
+  /* Specified height */
   margin: 0;
   border-radius: 0;
 }
 
 /* Mouse-over effects */
 .slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
+  opacity: 1;
+  /* Fully shown on mouse-over */
 }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
+  -webkit-appearance: none;
+  /* Override default look */
   appearance: none;
-  width: 8px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: black; /* background */
-  cursor: pointer; /* Cursor on hover */
+  width: 8px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: black;
+  /* background */
+  cursor: pointer;
+  /* Cursor on hover */
   border: none;
   border-radius: none;
 }
 
 .slider::-moz-range-thumb {
-  width: 8px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: black; /* background */
-  cursor: pointer; /* Cursor on hover */
+  width: 8px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: black;
+  /* background */
+  cursor: pointer;
+  /* Cursor on hover */
   border: none;
   border-radius: none;
 }
@@ -285,7 +297,9 @@ button:hover {
   width: 100px;
 }
 
-.bgImg, .coin-img, .output {
+.bgImg,
+.coin-img,
+.output {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -304,13 +318,12 @@ textarea {
 
 #css-output {
   width: 100%;
-padding: 0;
+  padding: 0;
 }
 
 .reset {
   background-color: rgb(144, 0, 0);
 }
-
 
 .coinwrap {
   flex-grow: 1;
@@ -319,7 +332,6 @@ padding: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .flexbuffer {
