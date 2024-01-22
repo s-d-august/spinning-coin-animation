@@ -117,7 +117,7 @@ border-bottom: var(--border-bottom);
   border-top: 8px black solid;
 }
 
-.coinspin {
+.coinspin__title {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-top: 10px;
@@ -129,6 +129,10 @@ border-bottom: var(--border-bottom);
 .title__item {
   margin: 0;
   text-align: center;
+}
+
+.title__wrap {
+  width: auto;
 }
 
 input {
