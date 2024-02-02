@@ -21,7 +21,7 @@ let intervalAcc = [0, 12.5, 21.5, 30, 38, 45.5, 52.5, 59, 65, 70.5, 75.5, 80, 84
 let intervalEven = [0, 50, 100];
 //The coin spins at a constant speed.
 
-let interval = intervalAcc; // set intervalAcc or intervalEven
+let interval = intervalEven; // set intervalAcc or intervalEven
 
 
 //The following makes sure the coin animation plays in the right direction -- linear for the constant, alternate for the accel/decel. 
@@ -70,18 +70,6 @@ let css1 = [`
   --side-dark: #0e0e0e;
 }
 
-html {
-  height: 100%;
-}
-
-body {
-  height: 100%;
-  background-color: ${backgroundColor};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .coin {
   height: ${coinSize}${unit};
   width: ${coinSize}${unit};
@@ -89,6 +77,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: ${backgroundColor};
 }
 
 .coin::before {
@@ -251,22 +240,6 @@ let css3 = [`
 }}`]
 
 let css = (css1 + css2 + css3)
-
-/* ONLY ONE OF THE BELOW SHOULD BE OPERATIONAL -- EITHER OVERRIDE STYLESHEET OR WRITE TO <style>
-   MAKE SURE THE OTHER IS COMMENTED OUT! */
-
-/* TO OVERRIDE STYLESHEET -- INSERT <script src="timing.js"></script> IN BODY
-
-// Construct the CSSStyleSheet
-const stylesheet = new CSSStyleSheet();
-
-// Add some CSS
-stylesheet.replaceSync(css1 + css2 + css3)
-
-// Tell the document to adopt your new stylesheet.
-document.adoptedStyleSheets = [stylesheet];
-
-*/
 
 //TO WRITE TO <style> -- INSERT <script src="timing.js"></script> IN HEAD (or body I guess)
 
