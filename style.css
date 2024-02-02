@@ -61,6 +61,10 @@ input::placeholder {
   width: 12px;
   height: 12px;
   margin-right: 5px;
+  cursor: pointer;
+}
+
+.help {
   cursor: help;
 }
 
@@ -161,7 +165,8 @@ input {
   border-radius: 3px;
 }
 
-input:hover {
+input:hover,
+#about__button:hover {
   opacity: 100%;
 }
 
@@ -182,6 +187,10 @@ button:hover {
   background-color: #7c99ff;
   color: #0e0e0e;
   cursor: pointer;
+}
+
+button.reset:hover {
+  background-color: #ffd2e8;
 }
 
 .spinstyle__button--active {
@@ -295,6 +304,10 @@ button:hover {
 #bgColor__input {
   align-items: center;
   width: 100px;
+}
+
+#bgColor__input:hover {
+  cursor: pointer;
 }
 
 .bgImg,
