@@ -89,11 +89,6 @@ input::placeholder {
   flex-grow: 0;
   margin: 20px;
   border-radius: 5px;
-  overflow-y: auto;
-}
-
-#about__button {
-  font-weight: 900;
 }
 
 .about__title {
@@ -119,9 +114,10 @@ input::placeholder {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  height: auto;
-  overflow-y: auto;
+  height: 100%;
 }
+
+
 
 .menu__item {
   width: 100%;
