@@ -47,7 +47,7 @@ label {
 
 #about__button {
   color: black;
-  background-color: #e2e2e2;
+  background-color: white;
   border-bottom: black solid 10px;
 }
 
@@ -166,7 +166,7 @@ input:hover {
 }
 
 button {
-  background-color: #282828;
+  background-color: #242c61;
   color: white;
   width: 100%;
   text-align: center;
@@ -179,13 +179,13 @@ button {
 }
 
 button:hover {
-  background-color: #d3d3d3;
+  background-color: #7c99ff;
   color: #0e0e0e;
   cursor: pointer;
 }
 
 .spinstyle__button--active {
-  background-color: #5a5a5a;
+  background-color: #2b34b7;
 }
 
 #spinstyle__alt {
