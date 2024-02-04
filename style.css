@@ -377,9 +377,9 @@ textarea {
   width: 10rem;
   border-radius: 50%;
   background-color: var(--face);
-  animation-direction: linear;
-  animation-name: spinConst;
-  animation-duration: 150s;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  animation-name: spinAlt;
   animation-iteration-count: infinite;
   background-image: var(--coin-face);
   background-size: 100% 100%;
