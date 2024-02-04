@@ -60,6 +60,10 @@ input::placeholder {
   cursor: pointer;
 }
 
+#minusicon {
+  margin-bottom: 14px;
+}
+
 .help {
   cursor: help;
 }
