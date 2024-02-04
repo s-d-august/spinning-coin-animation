@@ -6,8 +6,8 @@ let unit = ['rem']; // i.e. px, in, rem
 
 let backgroundColor = ['#f0efff']; // string should be formatted for CSS -- hex, RGB, and valid color names are acceptable
 
-let headImage = ['url("crown.png")']; // link to the image for the HEADS side of the coin, formatted for CSS. Can be local or external.
-let tailImage = ['url("knife.png")']; // same as above, for TAILS
+let headImage = ['url("bulb.png")']; // link to the image for the HEADS side of the coin, formatted for CSS. Can be local or external.
+let tailImage = ['url("peace.png")']; // same as above, for TAILS
 
 let animationTime = [15]; // in seconds. The complete accelerate/decelerate cycle takes twice this time (because it reverses.)
 
