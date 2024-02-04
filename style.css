@@ -247,6 +247,10 @@ button.reset:hover {
   font-size: small;
 }
 
+#speedInput {
+  direction: rtl;
+}
+
 .title {
   margin-top: 15px;
 }
