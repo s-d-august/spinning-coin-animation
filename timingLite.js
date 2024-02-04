@@ -37,7 +37,12 @@ var slider = document.getElementById("speedInput");
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
-  var speed = slider.value;
+  if (buttonAlt.classList.contains('spinstyle__button--active'))
+  {
+    var speed = ((slider.value) * 10);
+  }
+  else {var speed = slider.value;}
+
   var coin = document.querySelector(".coin");
   coin.style.animationDuration = `${speed}s`;
 } 
