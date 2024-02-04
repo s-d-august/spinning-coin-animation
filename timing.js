@@ -241,6 +241,13 @@ let css3 = [`
 
 let css = (css1 + css2 + css3)
 
+
 //TO WRITE TO <style> -- INSERT <script src="timing.js"></script> IN HEAD (or body I guess)
 
+let newCSS = document.createElement('style');
+newCSS.innerText = test;
+let docHead = document.querySelector('head');
+// docHead.appendChild(newCSS);
+
 document.write('<style>' + css + '</style>')
+
