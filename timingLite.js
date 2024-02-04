@@ -45,6 +45,11 @@ var url2 = coinTails.value;
 coinHeads.addEventListener('input', isImgUrl(url1, coinHeads));
 coinTails.addEventListener('input', isImgUrl(url2, coinTails));
 
+var imgTest = 'https://em-content.zobj.net/source/microsoft/310/robot_1f916.png'
+
+root.style.setProperty('--head', `url("${imgTest}")`);
+
+/*
 function isImgUrl(url, element) {
   return fetch(url, {method: 'HEAD'}).then(res => {
     if (res.headers.get('Content-Type').startsWith('image')){
