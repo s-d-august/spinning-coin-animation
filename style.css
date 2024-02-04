@@ -370,9 +370,6 @@ textarea {
   align-items: center;
   flex-grow: 0;
   margin: 50px;
-}
-
-.coin::before {
   content: "";
   display: block;
   position: relative;
@@ -380,7 +377,10 @@ textarea {
   width: 10rem;
   border-radius: 50%;
   background-color: var(--face);
-  animation: spinVOID 15s alternate infinite;
+  animation-direction: linear;
+  animation-name: spinConst;
+  animation-duration: 150s;
+  animation-iteration-count: infinite;
   background-image: var(--coin-face);
   background-size: 100% 100%;
   background-position: center;
