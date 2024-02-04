@@ -77,16 +77,24 @@ slider.oninput = function() {
 
 var buttonAlt = document.getElementById("spinstyle__alt");
 var buttonConst = document.getElementById("spinstyle__const");
-buttonAlt.addEventListener('click', function(){spinStyle(spinAlt, alternate);});
-buttonConst.addEventListener('click', function(){spinStyle(spinConst, linear);});
 
+function spinStyleAlt() {
+  var coin = document.querySelector('.coin');
+  coin.style.animationName = `spinAlt`;
+}
 
-  function spinStyle(name, direction) {
+document.querySelector('#spinstyle__alt').addEventListener('click', () => {
+  spinStyleAlt();
+})
 
-    var coin = document.querySelector(".coin");
-      coin.style.animationName = `${name}`;
-      coin.style.animationDirection = `${direction}`;
-    }
+function spinStyleConst() {
+  var coin = document.querySelector('.coin');
+  coin.style.animationName = `spinConst`;
+}
+
+document.querySelector('#spinstyle__const').addEventListener('click', () => {
+  spinStyleConst();
+})
 
 
 
