@@ -144,9 +144,7 @@ input::placeholder {
   width: auto;
 }
 
-.collapse {
-  display: none;
-}
+
 
 input {
   border: 0;
@@ -228,6 +226,10 @@ button.reset:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.collapse {
+  display: none;
 }
 
 .speed {

@@ -1,12 +1,34 @@
 // show/hide ABOUT tab
 
-function collapseElement() {
-  var aboutButton = document.getElementById("about__text");
-  aboutButton.classList.toggle('collapse');
+
+
+function classToggle(element, toggle) {
+  element.classList.toggle(toggle);
 }
 
-document.querySelector('#about__button').addEventListener('click', () => {
-  collapseElement();
+var aboutButton = document.getElementById('about__button')
+var aboutText = document.getElementById('about__text')
+
+aboutButton.addEventListener('click', () => {
+  classToggle(aboutText, 'collapse')
+})
+
+var plusIcon = document.getElementById('plusicon')
+var minusIcon = document.getElementById('minusicon')
+var urlLine2 = document.querySelector('.coin-img__line2')
+
+function toggleAll() {
+  classToggle(urlLine2, 'collapse');
+  classToggle(minusIcon, 'hide');
+  classToggle(plusIcon, 'hide');
+}
+
+plusIcon.addEventListener('click', () => {
+  toggleAll();
+})
+
+minusIcon.addEventListener('click', () => {
+  toggleAll();
 })
 
 
