@@ -35,6 +35,65 @@ minusIcon.addEventListener('click', () => {
   toggleURL2();
 })
 
+var root = document.querySelector(':root');
+var coinHeads = document.getElementById('coin-img__input1');
+var coinTails = document.getElementById('coin-img__input2')
+
+var url1 = coinHeads.value;
+var url2 = coinTails.value;
+
+coinHeads.addEventListener('input', isImgUrl(url1, coinHeads));
+coinTails.addEventListener('input', isImgUrl(url2, coinTails));
+
+function isImgUrl(url, element) {
+  return fetch(url, {method: 'HEAD'}).then(res => {
+    if (res.headers.get('Content-Type').startsWith('image')){
+      faceChange(url);
+    }
+    else {
+      showErrorMessage(element)
+    }
+  })
+}
+
+
+function faceChange() {
+
+  if (url1 && url2){
+    root.style.setProperty('--head', url1);
+    root.style.setProperty('--tail', url2);
+  }
+  else if (url1 || url2) {
+    var url0 = (url1 || url2);
+    root.style.setProperty('--head', url0);
+    root.style.setProperty('--tail', url0);
+  }
+ 
+}
+
+function showErrorMessage(input) {
+  let container = input.parentElement; // The .input-wrapper
+  
+  // Remove an existing error
+  let error = container.querySelector('.error-message');
+  if (error) {
+    container.removeChild(error);
+  }
+  
+  // Now add the error, if the message is not empty
+  if (message) {
+    let error = document.createElement('div');
+    error.classList.add('error-message');
+    error.innerText = "This URL isn't valid!";
+    container.appendChild(error);
+  }
+}
+
+/* 
+ - validate input
+ - if only one input, set for both
+*/
+
 
 
 // ColorPicker for Background
