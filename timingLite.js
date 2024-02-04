@@ -21,6 +21,10 @@ function toggleAll() {
   classToggle(urlLine2, 'collapse');
   classToggle(minusIcon, 'hide');
   classToggle(plusIcon, 'hide');
+  if (minusIcon.classList.contains('hide')){
+    document.getElementById('coin-img__input1').placeholder = "paste URL for faces here";}
+    else {document.getElementById('coin-img__input1').placeholder = "paste URL for heads here"
+  }
 }
 
 plusIcon.addEventListener('click', () => {
