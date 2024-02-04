@@ -31,7 +31,8 @@ function updateColor(event) {
 }
 
 
-
+var buttonAlt = document.getElementById("spinstyle__alt");
+var buttonConst = document.getElementById("spinstyle__const");
 var slider = document.getElementById("speedInput");
 
 // Update the current slider value (each time you drag the slider handle)
@@ -41,12 +42,14 @@ slider.oninput = function() {
   coin.style.animationDuration = `${speed}s`;
 } 
 
-var buttonAlt = document.getElementById("spinstyle__alt");
-var buttonConst = document.getElementById("spinstyle__const");
+
 
 function spinStyleAlt() {
   var coin = document.querySelector('.coin');
   coin.style.animationName = `spinAlt`;
+  coin.style.animationDirection = `alternate`;
+  buttonAlt.classList.toggle('spinstyle__button--active');
+  buttonConst.classList.toggle('spinstyle__button--active');
 }
 
 document.querySelector('#spinstyle__alt').addEventListener('click', () => {
@@ -56,6 +59,9 @@ document.querySelector('#spinstyle__alt').addEventListener('click', () => {
 function spinStyleConst() {
   var coin = document.querySelector('.coin');
   coin.style.animationName = `spinConst`;
+  coin.style.animationDirection = `linear`;
+  buttonAlt.classList.toggle('spinstyle__button--active');
+  buttonConst.classList.toggle('spinstyle__button--active');
 }
 
 document.querySelector('#spinstyle__const').addEventListener('click', () => {
