@@ -41,6 +41,27 @@ document.querySelector('#about__button').addEventListener('click', () => {
   collapseElement();
 })
 
+//ColorPicker for Background
+
+let colorPicker;
+const defaultColor = "#f0efff";
+
+window.addEventListener("load", startup, false);
+
+function startup() {
+  colorPicker = document.querySelector("#bgColor__input");
+  colorPicker.value = defaultColor;
+  colorPicker.addEventListener("input", updateColor, false);
+  colorPicker.select();
+}
+
+function updateColor(event) {
+  const body = document.querySelector("body");
+  if (body) {
+    body.style.backgroundColor = event.target.value;
+  }
+}
+
 
 
 var slider = document.getElementById("speedInput");
