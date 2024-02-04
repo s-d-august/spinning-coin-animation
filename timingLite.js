@@ -36,7 +36,10 @@ var buttonConst = document.getElementById("spinstyle__const");
 var slider = document.getElementById("speedInput");
 
 // Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
+
+slider.addEventListener('input', speedAdjust);
+
+function speedAdjust() {
   if (buttonAlt.classList.contains('spinstyle__button--active'))
   {
     var speed = ((slider.value) * 10);
@@ -59,6 +62,7 @@ function spinStyleAlt() {
 
 document.querySelector('#spinstyle__alt').addEventListener('click', () => {
   spinStyleAlt();
+  speedAdjust();
 })
 
 function spinStyleConst() {
@@ -71,4 +75,5 @@ function spinStyleConst() {
 
 document.querySelector('#spinstyle__const').addEventListener('click', () => {
   spinStyleConst();
+  speedAdjust();
 })
