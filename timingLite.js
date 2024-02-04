@@ -32,6 +32,14 @@ if (interval === intervalAcc) {
 else {animationDirection = ['linear'];
 }
 
+function collapseElement() {
+  var aboutButton = document.getElementById("about__text");
+  aboutButton.classList.toggle('collapse');
+}
+
+document.querySelector('#about__button').addEventListener('click', () => {
+  collapseElement();
+})
 
 function myFunction() {
   // Get the text field
