@@ -1,3 +1,5 @@
+// show/hide ABOUT tab
+
 function collapseElement() {
   var aboutButton = document.getElementById("about__text");
   aboutButton.classList.toggle('collapse');
@@ -9,7 +11,7 @@ document.querySelector('#about__button').addEventListener('click', () => {
 
 
 
-//ColorPicker for Background
+// ColorPicker for Background
 
 let colorPicker;
 const defaultColor = "#f0efff";
@@ -31,26 +33,33 @@ function updateColor(event) {
 }
 
 
+
+// Setting variables
+
 var buttonAlt = document.getElementById("spinstyle__alt");
 var buttonConst = document.getElementById("spinstyle__const");
 var slider = document.getElementById("speedInput");
 
-// Update the current slider value (each time you drag the slider handle)
+
+
+
+// Speed slider
 
 slider.addEventListener('input', speedAdjust);
 
 function speedAdjust() {
-  if (buttonAlt.classList.contains('spinstyle__button--active'))
-  {
+  if (buttonAlt.classList.contains('spinstyle__button--active')) {
     var speed = ((slider.value) * 10);
   }
-  else {var speed = slider.value;}
+  else { var speed = slider.value; }
 
   var coin = document.querySelector(".coin");
   coin.style.animationDuration = `${speed}s`;
-} 
+}
 
 
+
+// Spin style buttons 
 
 function spinStyleAlt() {
   var coin = document.querySelector('.coin');
