@@ -17,7 +17,7 @@ var plusIcon = document.getElementById('plusicon')
 var minusIcon = document.getElementById('minusicon')
 var urlLine2 = document.querySelector('.coin-img__line2')
 
-function toggleAll() {
+function toggleURL2() {
   classToggle(urlLine2, 'collapse');
   classToggle(minusIcon, 'hide');
   classToggle(plusIcon, 'hide');
@@ -28,11 +28,11 @@ function toggleAll() {
 }
 
 plusIcon.addEventListener('click', () => {
-  toggleAll();
+  toggleURL2();
 })
 
 minusIcon.addEventListener('click', () => {
-  toggleAll();
+  toggleURL2();
 })
 
 
