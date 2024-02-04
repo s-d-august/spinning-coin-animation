@@ -37,13 +37,13 @@ minusIcon.addEventListener('click', () => {
 
 var root = document.querySelector(':root');
 var coinHeads = document.getElementById('coin-img__input1');
-var coinTails = document.getElementById('coin-img__input2')
+var coinTails = document.getElementById('coin-img__input2');
 
 var url1 = coinHeads.value;
 var url2 = coinTails.value;
 
-coinHeads.addEventListener('input', isImgUrl(url1, coinHeads));
-coinTails.addEventListener('input', isImgUrl(url2, coinTails));
+coinHeads.addEventListener('change', showErrorMessage(coinHeads));
+coinTails.addEventListener('change', faceChange);
 
 var imgTest = 'https://em-content.zobj.net/source/microsoft/310/robot_1f916.png'
 
@@ -60,7 +60,7 @@ function isImgUrl(url, element) {
     }
   })
 }
-
+*/
 
 function faceChange() {
 
@@ -72,6 +72,7 @@ function faceChange() {
     var url0 = (url1 || url2);
     root.style.setProperty('--head', url0);
     root.style.setProperty('--tail', url0);
+    document.querySelector('html').style.setProperty("background-image", url0)
   }
  
 }
@@ -86,7 +87,7 @@ function showErrorMessage(input) {
   }
   
   // Now add the error, if the message is not empty
-  if (message) {
+  else {
     let error = document.createElement('div');
     error.classList.add('error-message');
     error.innerText = "This URL isn't valid!";
