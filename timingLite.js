@@ -168,7 +168,7 @@ document.querySelector('#spinstyle__alt').addEventListener('click', () => {
 function spinStyleConst() {
   var coin = document.querySelector('.coin');
   coin.style.animationName = `spinConst`;
-  coin.style.animationDirection = `linear`;
+  coin.style.animationDirection = `normal`;
   buttonAlt.classList.toggle('spinstyle__button--active');
   buttonConst.classList.toggle('spinstyle__button--active');
 }
