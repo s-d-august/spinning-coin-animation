@@ -32,6 +32,7 @@ body {
 p {
   line-height: 1.3;
   font-weight: 500;
+  text-align: center;
 }
 
 h2 {
@@ -103,8 +104,13 @@ input::placeholder {
 }
 
 .about__text {
-  padding: 0 10px;
+  padding: 0 20px;
   font-weight: var(--font-weight);
+}
+
+.emojis {
+  text-justify: inter-ideograph;
+  text-align-last: justify;
 }
 
 .credits {
