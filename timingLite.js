@@ -65,14 +65,13 @@ function isImgUrl(url, element) {
 function faceChange() {
 
   if (url1 && url2){
-    root.style.setProperty('--head', url1);
-    root.style.setProperty('--tail', url2);
+    root.style.setProperty('--head', `url("${url1}")`);
+    root.style.setProperty('--tail', `url("${url2}")`);
   }
   else if (url1 || url2) {
     var url0 = (url1 || url2);
-    root.style.setProperty('--head', url0);
-    root.style.setProperty('--tail', url0);
-    document.querySelector('html').style.setProperty("background-image", url0)
+    root.style.setProperty('--head', `url("${url0}")`);
+    root.style.setProperty('--tail', `url("${url0}")`);
   }
  
 }
