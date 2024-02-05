@@ -45,7 +45,7 @@ var url2 = coinTails.value;
 coinHeads.addEventListener('change', showErrorMessage(coinHeads));
 coinTails.addEventListener('change', faceChange);
 
-var imgTest = 'https://em-content.zobj.net/source/microsoft/310/robot_1f916.png'
+var imgTest = 'bulb.png'
 
 root.style.setProperty('--head', `url("${imgTest}")`);
 
