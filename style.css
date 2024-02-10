@@ -391,7 +391,7 @@ textarea {
   background-color: var(--face);
   animation-duration: 5s;
   animation-direction: alternate;
-  animation-name: spinAlt;
+  animation-name: spinConst;
   animation-iteration-count: infinite;
   background-image: var(--coin-face);
   background-size: 100% 100%;
