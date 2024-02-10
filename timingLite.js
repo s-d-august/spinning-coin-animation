@@ -21,10 +21,7 @@ function toggleURL2() {
   classToggle(urlLine2, 'collapse');
   classToggle(minusIcon, 'hide');
   classToggle(plusIcon, 'hide');
-  if (minusIcon.classList.contains('hide')){
-    document.getElementById('coin-img__input1').placeholder = "paste URL for faces here";}
-    else {document.getElementById('coin-img__input1').placeholder = "paste URL for heads here"
-  }
+  
 }
 
 plusIcon.addEventListener('click', () => {
@@ -39,15 +36,12 @@ var root = document.querySelector(':root');
 var coinHeads = document.getElementById('coin-img__input1');
 var coinTails = document.getElementById('coin-img__input2');
 
-var url1 = coinHeads.value;
-var url2 = coinTails.value;
+// coinHeads.addEventListener('change', faceChange);
+// coinTails.addEventListener('change', faceChange);
 
-coinHeads.addEventListener('change', showErrorMessage(coinHeads));
-coinTails.addEventListener('change', faceChange);
+// var imgTest = 'crown.png'
 
-var imgTest = 'bulb.png'
-
-root.style.setProperty('--head', `url("${imgTest}")`);
+// root.style.setProperty('--head', `url("${imgTest}")`);
 
 /*
 function isImgUrl(url, element) {
@@ -62,7 +56,33 @@ function isImgUrl(url, element) {
 }
 */
 
-function faceChange() {
+
+let imageHeads = [];
+let imageTails = [];
+
+
+coinHeads.addEventListener('change', function() {
+  const file_reader = new FileReader();
+  file_reader.addEventListener('load', () => {
+    const uploaded_image = file_reader.result;
+    imageHeads.splice(0, 1, uploaded_image);
+    faceChange(imageHeads[0], imageTails[0]);
+  });
+  file_reader.readAsDataURL(this.files[0]);
+});
+
+coinTails.addEventListener('change', function() {
+  const file_reader = new FileReader();
+  file_reader.addEventListener('load', () => {
+    const uploaded_image = file_reader.result;
+    imageTails.splice(0, 1, uploaded_image);
+    faceChange(imageHeads[0], imageTails[0]);
+  });
+  file_reader.readAsDataURL(this.files[0]);
+});
+
+
+function faceChange(url1, url2) {
 
   if (url1 && url2){
     root.style.setProperty('--head', `url("${url1}")`);
@@ -73,9 +93,12 @@ function faceChange() {
     root.style.setProperty('--head', `url("${url0}")`);
     root.style.setProperty('--tail', `url("${url0}")`);
   }
+  else {
+    return
+  }
  
 }
-
+/*
 function showErrorMessage(input) {
   let container = input.parentElement; // The .input-wrapper
   
@@ -93,7 +116,7 @@ function showErrorMessage(input) {
     container.appendChild(error);
   }
 }
-
+*/
 /* 
  - validate input
  - if only one input, set for both
