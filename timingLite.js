@@ -129,6 +129,7 @@ function updateColor(event) {
 var buttonAlt = document.getElementById("spinstyle__alt");
 var buttonConst = document.getElementById("spinstyle__const");
 var slider = document.getElementById("speedInput");
+var sliderValueArray = [0.1, 0.25, 0.5, 1, 1.5, 4, 5]
 
 
 
@@ -138,14 +139,16 @@ var slider = document.getElementById("speedInput");
 slider.addEventListener('input', speedAdjust);
 
 function speedAdjust() {
+  let sliderValue = slider.value;
   if (buttonAlt.classList.contains('spinstyle__button--active')) {
-    var speed = ((slider.value) * 10);
+    var speed = ((sliderValueArray[sliderValue]) * 10);
   }
-  else { var speed = slider.value; }
+  else { var speed = sliderValueArray[sliderValue]; }
 
   var coin = document.querySelector(".coin");
   coin.style.animationDuration = `${speed}s`;
 }
+
 
 
 
