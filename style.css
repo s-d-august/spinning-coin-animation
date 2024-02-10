@@ -390,7 +390,7 @@ textarea {
   border-radius: 50%;
   background-color: var(--face);
   animation-duration: 5s;
-  animation-direction: alternate;
+  animation-direction: normal;
   animation-name: spinConst;
   animation-iteration-count: infinite;
   background-image: var(--coin-face);
