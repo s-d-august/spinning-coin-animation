@@ -389,7 +389,7 @@ textarea {
   width: 10rem;
   border-radius: 50%;
   background-color: var(--face);
-  animation-duration: 5s;
+  animation-duration: 1s;
   animation-direction: normal;
   animation-name: spinConst;
   animation-iteration-count: infinite;
