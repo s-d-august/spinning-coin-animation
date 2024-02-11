@@ -209,6 +209,12 @@ button.reset:hover {
   background-color: #ffb0d6;
 }
 
+.spinstyle button {
+  width: 100px;
+  margin: 15px 0px;
+  border-radius: 3px;
+}
+
 .spinstyle__button--active {
   background-color: #2b34b7;
   border: black 3px inset;
@@ -324,7 +330,8 @@ button.reset:hover {
   border-radius: none;
 }
 
-.coinColor__input {
+.coinColor__input,
+.spinstyle {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
