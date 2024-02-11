@@ -13,9 +13,16 @@ aboutButton.addEventListener('click', () => {
   classToggle(aboutText, 'collapse')
 })
 
+let imageHeads = [];
+let imageTails = [];
+
 var plusIcon = document.getElementById('plusicon')
 var minusIcon = document.getElementById('minusicon')
 var urlLine2 = document.querySelector('.coin-img__line2')
+
+var root = document.querySelector(':root');
+var coinHeads = document.getElementById('coin-img__input1');
+var coinTails = document.getElementById('coin-img__input2');
 
 function toggleURL2() {
   classToggle(urlLine2, 'collapse');
@@ -35,9 +42,7 @@ minusIcon.addEventListener('click', () => {
   faceChange(imageHeads[0], imageTails[0]);
 })
 
-var root = document.querySelector(':root');
-var coinHeads = document.getElementById('coin-img__input1');
-var coinTails = document.getElementById('coin-img__input2');
+
 
 // coinHeads.addEventListener('change', faceChange);
 // coinTails.addEventListener('change', faceChange);
@@ -60,8 +65,7 @@ function isImgUrl(url, element) {
 */
 
 
-let imageHeads = [];
-let imageTails = [];
+
 
 
 coinHeads.addEventListener('change', function() {
