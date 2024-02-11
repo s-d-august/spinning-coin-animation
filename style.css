@@ -1,8 +1,8 @@
 :root {
-  --face: #a0a0a0;
+  --face: #be9d66;
   --lowlight: #111;
-  --side: #6F6F6F;
-  --side-dark: #0e0e0e;
+  --side: #896c3b;
+  --side-dark: #120e08;
   --head: url("crown.png");
   --tail: url("knife.png");
   --coinsize: 50px;
@@ -172,7 +172,7 @@ input {
   background-color: white;
 }
 
-input, #about__button {
+input, #about__button, .coinColor {
   opacity: 0.7;
   /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s;
@@ -181,7 +181,8 @@ input, #about__button {
 }
 
 input:hover,
-#about__button:hover {
+#about__button:hover,
+.coinColor:hover {
   opacity: 100%;
 }
 
@@ -205,15 +206,16 @@ button:hover {
 }
 
 button.reset:hover {
-  background-color: #ffd2e8;
+  background-color: #ffb0d6;
 }
 
 .spinstyle__button--active {
   background-color: #2b34b7;
+  border: black 3px inset;
 }
 
 #spinstyle__alt {
-  border-bottom: var(--border-bottom);
+  border: black 3px outset;
 }
 
 .size {
@@ -322,6 +324,37 @@ button.reset:hover {
   border-radius: none;
 }
 
+.coinColor__input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.coinColor {
+  height: 30px;
+  width: 30px;
+  background-color: #be9d66;
+  border-radius: 50%;
+  margin: 15px;
+  border: 3px black outset;
+}
+
+.copper {
+  filter:
+  hue-rotate(-40deg)
+  brightness(0.75)
+  contrast(115%);
+}
+
+.silver {
+  filter: saturate(0);
+}
+
+.coinColor.coinColor__selected {
+  opacity: 100%;
+  border: 3px black inset;
+}
+
 .bgColor {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -404,7 +437,7 @@ textarea {
   background-size: 100% 100%;
   background-position: center;
   background-blend-mode: overlay;
-
+  filter: saturate(0);
 }
 
 @keyframes spinConst {

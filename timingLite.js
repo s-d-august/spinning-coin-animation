@@ -1,5 +1,5 @@
 // show/hide ABOUT tab
-
+var coin = document.querySelector(".coin");
 
 
 function classToggle(element, toggle) {
@@ -32,8 +32,8 @@ function toggleURL2(line, minus, plus) {
   classToggle(line, 'collapse');
   classToggle(minus, 'collapse');
   classToggle(plus, 'collapse');
-//  classToggle(minusIcon2, 'collapse');
-//  classToggle(plusIcon2, 'collapse');
+  //  classToggle(minusIcon2, 'collapse');
+  //  classToggle(plusIcon2, 'collapse');
 }
 
 plusIcon.addEventListener('click', () => {
@@ -85,7 +85,7 @@ function isImgUrl(url, element) {
 
 
 
-coinHeads.addEventListener('change', function() {
+coinHeads.addEventListener('change', function () {
   const file_reader = new FileReader();
   file_reader.addEventListener('load', () => {
     const uploaded_image = file_reader.result;
@@ -95,12 +95,12 @@ coinHeads.addEventListener('change', function() {
   file_reader.readAsDataURL(this.files[0]);
 });
 
-coinTails.addEventListener('change', function() {
+coinTails.addEventListener('change', function () {
   const file_reader = new FileReader();
   file_reader.addEventListener('load', () => {
     const uploaded_image = file_reader.result;
-      tailImage.splice(0, 1, uploaded_image);
-    
+    tailImage.splice(0, 1, uploaded_image);
+
     faceChange(headImage[0], tailImage[0]);
   });
   file_reader.readAsDataURL(this.files[0]);
@@ -109,7 +109,7 @@ coinTails.addEventListener('change', function() {
 
 function faceChange(url1, url2) {
 
-  if (url1 && url2){
+  if (url1 && url2) {
     root.style.setProperty('--head', `url("${url1}")`);
     root.style.setProperty('--tail', `url("${url2}")`);
   }
@@ -121,7 +121,7 @@ function faceChange(url1, url2) {
   else {
     return
   }
- 
+
 }
 /*
 function showErrorMessage(input) {
@@ -147,7 +147,31 @@ function showErrorMessage(input) {
  - if only one input, set for both
 */
 
+var coinColorGold = document.getElementById('coinColor__gold')
+var coinColorSilver = document.getElementById('coinColor__silver')
+var coinColorCopper = document.getElementById('coinColor__copper')
 
+function coinColorClassSet(color) {
+  coinColorGold.classList.remove('coinColor__selected'),
+    coinColorSilver.classList.remove('coinColor__selected'),
+    coinColorCopper.classList.remove('coinColor__selected'),
+    color.classList.add('coinColor__selected')
+}
+
+coinColorGold.addEventListener('click', function () {
+  coin.style.filter = 'none';
+  coinColorClassSet(coinColorGold)
+})
+
+coinColorSilver.addEventListener('click', function () {
+  coin.style.filter = 'saturate(0)';
+  coinColorClassSet(coinColorSilver)
+})
+
+coinColorCopper.addEventListener('click', function () {
+  coin.style.filter = 'hue-rotate(-40deg) brightness(0.75) contrast(115%)';
+  coinColorClassSet(coinColorCopper)
+})
 
 // ColorPicker for Background
 
@@ -162,9 +186,9 @@ function startup() {
   colorPicker.addEventListener("input", updateColor, false);
   colorPicker.select();
 }
-
+const body = document.querySelector("body");
 function updateColor(event) {
-  const body = document.querySelector("body");
+
   if (body) {
     body.style.backgroundColor = event.target.value;
   }
@@ -193,7 +217,7 @@ function speedAdjust() {
   }
   else { var speed = sliderValueArrayConst[sliderValue]; }
 
-  var coin = document.querySelector(".coin");
+
   coin.style.animationDuration = `${speed}s`;
 }
 
@@ -210,7 +234,7 @@ function spinStyleAlt() {
   buttonAlt.classList.toggle('spinstyle__button--active');
   buttonConst.classList.toggle('spinstyle__button--active');
   slider.style.max = sliderValueArrayAlt.length
-  slider.style.value = ((sliderValueArrayAlt.length) / 2 )
+  slider.style.value = ((sliderValueArrayAlt.length) / 2)
 }
 
 document.querySelector('#spinstyle__alt').addEventListener('click', () => {
@@ -225,10 +249,28 @@ function spinStyleConst() {
   buttonAlt.classList.toggle('spinstyle__button--active');
   buttonConst.classList.toggle('spinstyle__button--active');
   slider.style.max = sliderValueArrayConst.length
-  slider.style.value = ((sliderValueArrayConst.length) / 2 )
+  slider.style.value = ((sliderValueArrayConst.length) / 2)
 }
 
 document.querySelector('#spinstyle__const').addEventListener('click', () => {
   spinStyleConst();
   speedAdjust();
+})
+
+var reset = document.getElementById('reset')
+
+reset.addEventListener('click', function(){
+  headImage.splice(0, 1);
+  coinHeads.value = '';
+  tailImage.splice(0, 1);
+  coinTails.value = '';
+  classToggle(urlLine2, 'collapse');
+  spinStyleConst();
+  speedAdjust();
+  faceChange(headImage[0], tailImage[0]);
+  colorPicker.value = defaultColor;
+  body.style.backgroundColor = defaultColor;
+  coin.style.filter = 'saturate(0)';
+  coinColorClassSet(coinColorSilver);
+  aboutText.classList.add('collapse');
 })
