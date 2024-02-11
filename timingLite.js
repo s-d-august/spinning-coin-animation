@@ -26,30 +26,37 @@ var root = document.querySelector(':root');
 var coinHeads = document.getElementById('coin-img__input1');
 var coinTails = document.getElementById('coin-img__input2');
 
-function toggleURL2(line) {
+function toggleURL2(line, minus, plus) {
   classToggle(line, 'collapse');
-  classToggle(minusIcon, 'collapse');
-  classToggle(plusIcon, 'collapse');
-  classToggle(minusIcon2, 'collapse');
-  classToggle(plusIcon2, 'collapse');
+  classToggle(minus, 'collapse');
+  classToggle(plus, 'collapse');
+//  classToggle(minusIcon2, 'collapse');
+//  classToggle(plusIcon2, 'collapse');
 }
 
 plusIcon.addEventListener('click', () => {
-  toggleURL2(urlLine2);
+  toggleURL2(urlLine2, minusIcon, plusIcon);
+})
+
+plusIcon2.addEventListener('click', () => {
+  toggleURL2(urlLine1, minusIcon2, plusIcon2);
+
 })
 
 minusIcon.addEventListener('click', () => {
-  toggleURL2(urlLine1);
+  toggleURL2(urlLine1, minusIcon2, plusIcon2);
   faceImages.splice(0, 1);
   coinTails.value = '';
   faceChange(faceImages[0], faceImages[1]);
+
 })
 
 minusIcon2.addEventListener('click', () => {
-  toggleURL2(urlLine2);
+  toggleURL2(urlLine2, minusIcon, plusIcon);
   faceImages.splice(1, 1);
   coinTails.value = '';
   faceChange(faceImages[0], faceImages[1]);
+
 })
 
 // coinHeads.addEventListener('change', faceChange);

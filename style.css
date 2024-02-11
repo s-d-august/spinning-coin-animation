@@ -59,11 +59,10 @@ input::placeholder {
   height: 25px;
   margin-right: 5px;
   cursor: pointer;
-}
-
-.coin-img__line2 .icon {
   margin-bottom: 15px;
 }
+
+
 
 .help {
   cursor: help;
@@ -161,7 +160,7 @@ input {
   border: 0;
   outline: none;
   width: 90%;
-  margin: 15px 5px;
+  margin: 0 5px 15px 5px;
   border-radius: 3px;
   background-color: #e2e2e2;
 }
@@ -265,6 +264,10 @@ button.reset:hover {
   direction: rtl;
 }
 
+.coin-img .title {
+  margin-bottom: 15px;
+}
+
 .title {
   margin-top: 15px;
 }
@@ -328,6 +331,7 @@ button.reset:hover {
 #bgColor__input {
   align-items: center;
   width: 100px;
+  margin-top: 15px;
 }
 
 #bgColor__input:hover {
