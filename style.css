@@ -138,8 +138,7 @@ input::placeholder {
 }
 
 .menu__item:last-child {
-  border-bottom: none;
-  border-top: 8px black solid;
+  border-bottom: 8px black solid;
 }
 
 .coinspin__title {
