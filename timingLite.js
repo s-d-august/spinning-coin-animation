@@ -13,7 +13,9 @@ aboutButton.addEventListener('click', () => {
   classToggle(aboutText, 'collapse')
 })
 
-let faceImages = [];
+let headImage = [];
+let tailImage = [];
+
 
 var plusIcon = document.getElementById('plusicon')
 var plusIcon2 = document.getElementById('plusicon2')
@@ -45,17 +47,17 @@ plusIcon2.addEventListener('click', () => {
 
 minusIcon.addEventListener('click', () => {
   toggleURL2(urlLine1, minusIcon2, plusIcon2);
-  faceImages.splice(0, 1);
+  headImage.splice(0, 1);
   coinHeads.value = '';
-  faceChange(faceImages[0], faceImages[1]);
+  faceChange(headImage[0], tailImage[0]);
 
 })
 
 minusIcon2.addEventListener('click', () => {
   toggleURL2(urlLine2, minusIcon, plusIcon);
-  faceImages.splice(1, 1);
+  tailImage.splice(0, 1);
   coinTails.value = '';
-  faceChange(faceImages[0], faceImages[1]);
+  faceChange(headImage[0], tailImage[0]);
 
 })
 
@@ -87,8 +89,8 @@ coinHeads.addEventListener('change', function() {
   const file_reader = new FileReader();
   file_reader.addEventListener('load', () => {
     const uploaded_image = file_reader.result;
-    faceImages.splice(0, 1, uploaded_image);
-    faceChange(faceImages[0], faceImages[1]);
+    headImage.splice(0, 1, uploaded_image);
+    faceChange(headImage[0], tailImage[0]);
   });
   file_reader.readAsDataURL(this.files[0]);
 });
@@ -97,8 +99,9 @@ coinTails.addEventListener('change', function() {
   const file_reader = new FileReader();
   file_reader.addEventListener('load', () => {
     const uploaded_image = file_reader.result;
-    faceImages.splice(1, 1, uploaded_image);
-    faceChange(faceImages[0], faceImages[1]);
+      tailImage.splice(0, 1, uploaded_image);
+    
+    faceChange(headImage[0], tailImage[0]);
   });
   file_reader.readAsDataURL(this.files[0]);
 });
