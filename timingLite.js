@@ -46,7 +46,7 @@ plusIcon2.addEventListener('click', () => {
 minusIcon.addEventListener('click', () => {
   toggleURL2(urlLine1, minusIcon2, plusIcon2);
   faceImages.splice(0, 1);
-  coinTails.value = '';
+  coinHeads.value = '';
   faceChange(faceImages[0], faceImages[1]);
 
 })
