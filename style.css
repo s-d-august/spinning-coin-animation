@@ -91,6 +91,7 @@ input::placeholder {
   margin-right: 0;
   border-radius: 5px;
   align-items: center;
+  overflow: auto;
 }
 
 .about__title {
@@ -105,11 +106,15 @@ input::placeholder {
 .about__text {
   padding: 0 20px;
   font-weight: var(--font-weight);
+  background-color: #a0a0a0;
 }
 
 .emojis {
   text-justify: inter-ideograph;
   text-align-last: justify;
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 16px;
 }
 
 .credits {
@@ -187,7 +192,7 @@ input:hover,
 }
 
 button {
-  background-color: #242c61;
+  background-color: #4b4b4b;
   color: white;
   width: 100%;
   text-align: center;
@@ -197,6 +202,7 @@ button {
   /* 0.2 seconds transition on hover */
   transition: background-color color .2s;
   font-weight: var(--font-weight);
+
 }
 
 
@@ -214,17 +220,16 @@ button.reset:hover {
 }
 
 .spinstyle .spinstyle__button--active {
-  background-color: #2b34b7;
+  background-color: #e2e2e2;
   border: black 3px inset;
   filter: brightness(100%);
+  color: black;
 }
 
-.spinstyle .spinstyle__button--active:hover {
-  color: white;
-}
+
 
 button:hover {
-  background-color: #7c99ff;
+  background-color: #7a7a7a;
   color: #0e0e0e;
   cursor: pointer;
   filter: brightness(100%);
