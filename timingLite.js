@@ -30,6 +30,9 @@ plusIcon.addEventListener('click', () => {
 
 minusIcon.addEventListener('click', () => {
   toggleURL2();
+  imageTails.splice(0);
+  coinTails.value = '';
+  faceChange(imageHeads[0], imageTails[0]);
 })
 
 var root = document.querySelector(':root');
