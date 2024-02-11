@@ -18,6 +18,7 @@ let imageTails = [];
 
 var plusIcon = document.getElementById('plusicon')
 var minusIcon = document.getElementById('minusicon')
+var minusIcon2 = document.getElementById('minusicon2')
 var urlLine2 = document.querySelector('.coin-img__line2')
 
 var root = document.querySelector(':root');
@@ -26,8 +27,9 @@ var coinTails = document.getElementById('coin-img__input2');
 
 function toggleURL2() {
   classToggle(urlLine2, 'collapse');
-  classToggle(minusIcon, 'hide');
-  classToggle(plusIcon, 'hide');
+  classToggle(minusIcon, 'collapse')
+
+  classToggle(plusIcon, 'collapse');
   
 }
 
@@ -35,7 +37,7 @@ plusIcon.addEventListener('click', () => {
   toggleURL2();
 })
 
-minusIcon.addEventListener('click', () => {
+minusIcon2.addEventListener('click', () => {
   toggleURL2();
   imageTails.splice(0);
   coinTails.value = '';
