@@ -13,38 +13,44 @@ aboutButton.addEventListener('click', () => {
   classToggle(aboutText, 'collapse')
 })
 
-let imageHeads = [];
-let imageTails = [];
+let faceImages = [];
 
 var plusIcon = document.getElementById('plusicon')
+var plusIcon2 = document.getElementById('plusicon2')
 var minusIcon = document.getElementById('minusicon')
 var minusIcon2 = document.getElementById('minusicon2')
+var urlLine1 = document.querySelector('.coin-img__line1')
 var urlLine2 = document.querySelector('.coin-img__line2')
 
 var root = document.querySelector(':root');
 var coinHeads = document.getElementById('coin-img__input1');
 var coinTails = document.getElementById('coin-img__input2');
 
-function toggleURL2() {
-  classToggle(urlLine2, 'collapse');
-  classToggle(minusIcon, 'collapse')
-
+function toggleURL2(line) {
+  classToggle(line, 'collapse');
+  classToggle(minusIcon, 'collapse');
   classToggle(plusIcon, 'collapse');
-  
+  classToggle(minusIcon2, 'collapse');
+  classToggle(plusIcon2, 'collapse');
 }
 
 plusIcon.addEventListener('click', () => {
-  toggleURL2();
+  toggleURL2(urlLine2);
+})
+
+minusIcon.addEventListener('click', () => {
+  toggleURL2(urlLine1);
+  faceImages.splice(0, 1);
+  coinTails.value = '';
+  faceChange(faceImages[0], faceImages[1]);
 })
 
 minusIcon2.addEventListener('click', () => {
-  toggleURL2();
-  imageTails.splice(0);
+  toggleURL2(urlLine2);
+  faceImages.splice(1, 1);
   coinTails.value = '';
-  faceChange(imageHeads[0], imageTails[0]);
+  faceChange(faceImages[0], faceImages[1]);
 })
-
-
 
 // coinHeads.addEventListener('change', faceChange);
 // coinTails.addEventListener('change', faceChange);
@@ -74,8 +80,8 @@ coinHeads.addEventListener('change', function() {
   const file_reader = new FileReader();
   file_reader.addEventListener('load', () => {
     const uploaded_image = file_reader.result;
-    imageHeads.splice(0, 1, uploaded_image);
-    faceChange(imageHeads[0], imageTails[0]);
+    faceImages.splice(0, 1, uploaded_image);
+    faceChange(faceImages[0], faceImages[1]);
   });
   file_reader.readAsDataURL(this.files[0]);
 });
@@ -84,8 +90,8 @@ coinTails.addEventListener('change', function() {
   const file_reader = new FileReader();
   file_reader.addEventListener('load', () => {
     const uploaded_image = file_reader.result;
-    imageTails.splice(0, 1, uploaded_image);
-    faceChange(imageHeads[0], imageTails[0]);
+    faceImages.splice(1, 1, uploaded_image);
+    faceChange(faceImages[0], faceImages[1]);
   });
   file_reader.readAsDataURL(this.files[0]);
 });

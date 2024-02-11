@@ -61,7 +61,7 @@ input::placeholder {
   cursor: pointer;
 }
 
-#minusicon2 {
+.coin-img__line2 .icon {
   margin-bottom: 15px;
 }
 
@@ -391,7 +391,7 @@ textarea {
   width: 10rem;
   border-radius: 50%;
   background-color: var(--face);
-  animation-duration: 1s;
+  animation-duration: 10s;
   animation-direction: normal;
   animation-name: spinConst;
   animation-iteration-count: infinite;
