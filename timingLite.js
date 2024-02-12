@@ -201,7 +201,7 @@ function updateColor(event) {
 var buttonAlt = document.getElementById("spinstyle__alt");
 var buttonConst = document.getElementById("spinstyle__const");
 var slider = document.getElementById("speedInput");
-var sliderValueArrayConst = [0.15, 0.25, 0.37, 0.5, 0.75, 1, 1.5, 2, 3, 4, 5]
+var sliderValueArrayConst = [0.15, 0.2, 0.25, 0.37, 0.5, 0.75, 1, 1.5, 2, 3, 4, 5]
 var sliderValueArrayAlt = [3, 4, 5, 6, 7, 8, 9, 10, 11]
 
 
