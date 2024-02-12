@@ -264,13 +264,23 @@ reset.addEventListener('click', function(){
   coinHeads.value = '';
   tailImage.splice(0, 1);
   coinTails.value = '';
-  classToggle(urlLine2, 'collapse');
-  spinStyleConst();
-  speedAdjust();
   faceChange(headImage[0], tailImage[0]);
   colorPicker.value = defaultColor;
   coinwrap.style.backgroundColor = defaultColor;
   coin.style.filter = 'saturate(0)';
   coinColorClassSet(coinColorSilver);
   aboutText.classList.add('collapse');
+  urlLine1.classList.remove('collapse');
+  urlLine2.classList.add('collapse');
+  plusIcon.classList.remove('collapse');
+  minusIcon.classList.add('collapse');
+  plusIcon2.classList.add('collapse');
+  minusIcon2.classList.remove('collapse');
+  if (buttonAlt.classList.contains('spinstyle__button--active')) {
+    spinStyleConst();
+    speedAdjust();
+  }
+  else {
+    speedAdjust();
+  }
 })
