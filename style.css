@@ -373,12 +373,7 @@ button:hover {
   border: 3px black inset;
 }
 
-.bgColor {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  width: 100%;
-}
+
 
 #bgColor__input {
   align-items: center;
@@ -396,7 +391,8 @@ button:hover {
 
 .bgImg,
 .coin-img,
-.output {
+.output,
+.bgColor {
   display: flex;
   flex-direction: column;
   justify-content: center;
