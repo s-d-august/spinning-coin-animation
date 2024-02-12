@@ -135,9 +135,7 @@ input::placeholder {
   display: grid;
 }
 
-.menu__item:last-child {
-  border-bottom: 8px black solid;
-}
+
 
 .coinspin__title {
   display: grid;
@@ -418,6 +416,7 @@ textarea {
 
 .reset {
   background-color: rgb(144, 0, 0);
+  border-top: black 8px solid;
 }
 
 .coinwrap {
