@@ -169,7 +169,7 @@ coinColorSilver.addEventListener('click', function () {
 })
 
 coinColorCopper.addEventListener('click', function () {
-  coin.style.filter = 'hue-rotate(-40deg) brightness(0.75) contrast(115%)';
+  coin.style.filter = 'hue-rotate(-45deg)';
   coinColorClassSet(coinColorCopper)
 })
 
