@@ -264,7 +264,7 @@ reset.addEventListener('click', function(){
   coinHeads.value = '';
   tailImage.splice(0, 1);
   coinTails.value = '';
-  faceChange('crown.png', 'knife.png');
+  faceChange('heart1.png', 'heart2.png');
   colorPicker.value = defaultColor;
   coinwrap.style.backgroundColor = defaultColor;
   coin.style.filter = 'saturate(0)';
