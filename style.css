@@ -80,7 +80,8 @@ input::placeholder {
 }
 
 .UI__style {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: fit-content;
   outline: black solid 5px;
   background-color: #a0a0a0;
@@ -132,6 +133,7 @@ input::placeholder {
   height: auto;
   border: var(--border-bottom);
   display: grid;
+  flex-shrink: 1;
 }
 
 
