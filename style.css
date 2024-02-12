@@ -80,7 +80,7 @@ input::placeholder {
 }
 
 .UI__style {
-  width: 250px;
+  width: 500px;
   height: fit-content;
   max-height: 100%;
   outline: black solid 5px;
@@ -130,7 +130,6 @@ input::placeholder {
 
 .menu__item, .header__item {
   width: 100%;
-  max-width: 250px;
   height: auto;
   border-bottom: var(--border-bottom);
   display: grid;
