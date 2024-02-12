@@ -44,6 +44,7 @@
 
 
                 <nav class="menu">
+
                     <div class="menu__item">
                         <label for="spinstyle__buttons" class="title">spin style</label>
                         <div class= "spinstyle">
@@ -51,6 +52,17 @@
                             fast</button><br>
                         <button type="button" id="spinstyle__const" class="spinstyle__button--active">constant</button>
                     </div></div>
+
+                    <div class="menu__item speed">
+                        <label for="speedInput" class="title">spin speed</label>
+                        <div class="speed__label">
+                            <p>slow</p>
+                            <div class="flexbuffer"></div>
+                            <p>fast</p>
+                        </div>
+                        <input id="speedInput" type="range" min="0" max="10" value="5" class="slider" step="1"
+                            autocomplete="off">
+                    </div>
 
                     <div class="coinwrap menu__item">
 
@@ -61,6 +73,7 @@
 
                     <div class="menu__item coin-img">
                         <label for="coin-img__input" class="title">coin face(s)</label>
+                        <div class="coin-img__lines">
                         <div class="coin-img__line1">
                             <input type="file" class="coin-img__input" id="coin-img__input1" autocomplete="off"
                                 accept="image/*" title="Upload image for coin face.">
@@ -76,20 +89,11 @@
                                 title="Click to add separate tails image. Otherwise, the coin will look the same on both sides.">
                             <img class="icon" src="minus.png" id="minusicon2">
                         </div>
-
+</div>
                     </div>
 
 
-                    <div class="menu__item speed">
-                        <label for="speedInput" class="title">spin speed</label>
-                        <div class="speed__label">
-                            <p>slow</p>
-                            <div class="flexbuffer"></div>
-                            <p>fast</p>
-                        </div>
-                        <input id="speedInput" type="range" min="0" max="10" value="5" class="slider" step="1"
-                            autocomplete="off">
-                    </div>
+
 
                     <div class="menu__item coinColor__block">
                         <label for="coinColor__input" class="title">coin color</label>

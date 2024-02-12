@@ -82,7 +82,6 @@ input::placeholder {
 .UI__style {
   width: 500px;
   height: fit-content;
-  max-height: 100%;
   outline: black solid 5px;
   background-color: #a0a0a0;
   flex-grow: 0;
@@ -131,7 +130,7 @@ input::placeholder {
 .menu__item, .header__item {
   width: 100%;
   height: auto;
-  border-bottom: var(--border-bottom);
+  border: var(--border-bottom);
   display: grid;
 }
 
@@ -262,7 +261,6 @@ button:hover {
 .speed {
   width: 100%;
   /* Width of the outside container */
-  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -274,6 +272,7 @@ button:hover {
   margin: 0;
   padding: 0 3px;
   font-size: small;
+  margin-top: 5px;
 }
 
 #speedInput {
@@ -338,7 +337,8 @@ button:hover {
 }
 
 .coinColor__input,
-.spinstyle {
+.spinstyle,
+.coin-img__lines {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -390,6 +390,10 @@ button:hover {
   cursor: pointer;
 }
 
+.coin-img {
+  grid-column: 1 / 3;
+}
+
 .bgImg,
 .coin-img,
 .output {
@@ -422,6 +426,7 @@ textarea {
 .coinwrap {
   justify-content: center;
   grid-column: 1 / 3;
+  background-color: #f0efff;
 }
 
 .flexbuffer {
