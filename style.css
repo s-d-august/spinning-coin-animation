@@ -76,7 +76,6 @@ input::placeholder {
 .UI__position {
   width: 100%;
   display: flex;
-  flex: 0 1 0 1 0;
   align-items: center;
 }
 
@@ -87,8 +86,7 @@ input::placeholder {
   outline: black solid 5px;
   background-color: #a0a0a0;
   flex-grow: 0;
-  margin: 20px;
-  margin-right: 0;
+  margin: auto;
   border-radius: 5px;
   align-items: center;
 
