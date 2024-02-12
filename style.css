@@ -442,7 +442,6 @@ textarea {
   align-items: center;
   flex-grow: 1;
   margin: 30px;
-  content: "";
   display: block;
   position: relative;
   height: 10rem;
@@ -458,6 +457,8 @@ textarea {
   background-position: center;
   background-blend-mode: overlay;
   filter: saturate(0);
+  /* border: var(--side) solid 7px;  
+  adds outline to coin (color doesn't change on rotation)*/ 
 
 }
 
