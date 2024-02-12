@@ -186,11 +186,11 @@ function startup() {
   colorPicker.addEventListener("input", updateColor, false);
   colorPicker.select();
 }
-const body = document.querySelector("body");
+const coinwrap = document.querySelector(".coinwrap");
 function updateColor(event) {
 
-  if (body) {
-    body.style.backgroundColor = event.target.value;
+  if (coinwrap) {
+    coinwrap.style.backgroundColor = event.target.value;
   }
 }
 
@@ -269,7 +269,7 @@ reset.addEventListener('click', function(){
   speedAdjust();
   faceChange(headImage[0], tailImage[0]);
   colorPicker.value = defaultColor;
-  body.style.backgroundColor = defaultColor;
+  coinwrap.style.backgroundColor = defaultColor;
   coin.style.filter = 'saturate(0)';
   coinColorClassSet(coinColorSilver);
   aboutText.classList.add('collapse');
